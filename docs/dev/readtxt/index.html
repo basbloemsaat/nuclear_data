@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>read txt</title>
-</head>
+  </head>
 
-<body>
-    <script type="module" src="main.js"> </script>
-</body>
+  <body>
+    <script type="module">
+      import nubase16 from "/modules/nubase2016.js";
 
+      let x = nubase16();
+      console.log(x);
+
+      Window.nubase16 = nubase16;
+    </script>
+  </body>
 </html>
