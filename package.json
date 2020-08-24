@@ -1,0 +1,29 @@
+{
+  "name": "nuclear_data",
+  "version": "1.0.0",
+  "description": "spielerei",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basbloemsaat/nuclear_data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basbloemsaat/nuclear_data/issues"
+  },
+  "homepage": "https://github.com/basbloemsaat/nuclear_data#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
