@@ -1,0 +1,53 @@
+body {
+  background-color: #eeeeee;
+  font-family: sans-serif;
+  color: #000000;
+}
+
+div {
+  border: 1px dashed red;
+}
+
+div#wrapper {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 20rem auto 15rem;
+  grid-template-rows: 10rem 2rem auto 2rem;
+  grid-template-areas:
+    "logo pagetitle pagetitle"
+    "pagemenu pagemenu pagemenu"
+    "main main sidemenu"
+    "footer footer footer";
+  align-content: stretch;
+}
+
+svg#logo {
+  width: 20rem;
+}
+
+div#logo {
+  margin: auto;
+  grid-area: logo;
+}
+
+div#pagemenu {
+  grid-area: pagemenu;
+}
+div#pagetitle {
+  grid-area: pagetitle;
+}
+
+div#main {
+  grid-area: main;
+}
+div#sidemenu {
+  grid-area: sidemenu;
+  border-left: 1px solid #aaaaaa;
+}
+
+div#footer {
+  margin: auto 0 auto auto;
+  padding: 0.4rem ;
+  font-size: 0.8rem;
+  grid-area: footer;
+}
