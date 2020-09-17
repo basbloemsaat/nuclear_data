@@ -1,8 +1,8 @@
 import "https://d3js.org/d3.v5.js";
 
-let nubase2016_data = {};
+let nubase2016_data;
 
-Promise.all([d3.text("/data/Nubase2016/nubase2016.txt")]).then(function ([
+let p = Promise.all([d3.text("/data/Nubase2016/nubase2016.txt")]).then(function ([
   nubase2016_txt,
 ]) {
   nubase2016_txt = nubase2016_txt.split(/[\r\n]+/);
@@ -30,10 +30,10 @@ Promise.all([d3.text("/data/Nubase2016/nubase2016.txt")]).then(function ([
     return rv;
   });
 
-  nubase2016_data['per']
-
+  // nubase2016_data["per"];
 });
 
-export default function () {
-  return nubase2016_data["nubase2016"];
+export default function (callback) {
+  
+
 }
