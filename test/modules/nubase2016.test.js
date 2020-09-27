@@ -1,7 +1,7 @@
 import nubase2016 from "../../docs/modules/nubase2016.mjs";
 import { expect } from "../load_chai.mjs";
 
-console.log(nubase2016);
+// console.log(nubase2016);
 
 describe("nubase 2016", function () {
   it("nubase2016 should be an Object", function () {

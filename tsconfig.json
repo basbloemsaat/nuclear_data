@@ -4,6 +4,10 @@
     "noImplicitAny": true,
     "module": "es6",
     "target": "es6",
-    "allowJs": true
+    "allowJs": true,
+    "lib": ["dom"],
+    "sourceMap": true,
+    "rootDir": "./src",
+    "removeComments": true
   }
 }
