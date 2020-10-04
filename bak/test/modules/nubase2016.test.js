@@ -3,7 +3,7 @@ import { expect } from "../load_chai.mjs";
 
 // console.log(nubase2016);
 
-describe("nubase 2016", function () {
+
   it("nubase2016 should be an Object", function () {
     expect(nubase2016).to.be.an("Object");
   });
