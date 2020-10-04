@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es6",
     "allowJs": true,
     "lib": ["dom"],
+    "module": "es6",
+    "noImplicitAny": true,
+    "outDir": "./dist/",
+    "removeComments": true,
     "sourceMap": true,
-    "rootDir": "./src",
-    "removeComments": true
+    "target": "es5"
   }
 }
