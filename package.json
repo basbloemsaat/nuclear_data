@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha -r ts-node/register -r esm test/**/*.test.ts ",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "dev": "webpack-dev-server --host 0.0.0.0 --port 8080"
   },
   "keywords": [],

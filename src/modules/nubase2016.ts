@@ -1,3 +1,8 @@
+/*
+  Audi, Georges & Kondev, Filip & Wang, Meng & Huang, Wenjia & Naimi, S.. (2017). 
+  The NUBASE2016 evaluation of nuclear properties. Chinese Physics C. 41. 030001. 10.1088/1674-1137/41/3/030001. 
+*/
+
 let nubase2016_src_txt = `
 001 0000   1 n      8071.3171   0.0005                       613.9    s 0.6    1/2+          06          1932 B-=100
 001 0010   1H       7288.9706   0.0001                       stbl              1/2+          06 11Be53d  1920 IS=99.9885 70
