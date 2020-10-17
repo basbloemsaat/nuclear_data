@@ -5633,13 +5633,13 @@ let nubase2016_src_txt = `
 
 class NuBase2016 {
   _dataraw: String;
-  _datafull: Object;
+  _datafull: Array<Object>;
 
   constructor() {
     this._dataraw = nubase2016_src_txt;
   }
 
-  get full(): Object {
+  get full(): Array<Object> {
     if (!this._datafull) {
       this._parse_raw_txt(this._dataraw);
     }

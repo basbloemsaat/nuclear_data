@@ -1,5 +1,2 @@
-import "./css/pndiagram.css"
-
-import nubase from "./modules/nubase2016";
-
-import "./modules/pndiagram";
+import "./css/zndiagram.css"
+import "./modules/controller"
