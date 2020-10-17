@@ -1,12 +1,18 @@
 body {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 4rem 100% 2rem;
-  font-family: Martel,serif;
+  grid-template-rows: 98vh 2rem;
+  font-family: Martel, serif;
+}
+
+footer {
+  text-align: right;
 }
 
 svg#npdiagram {
-    width: 98vw;
-    height: 98vh;
-    border: 1px solid red;
+  width: 98vw;
+  height: 98vh;
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
 }
