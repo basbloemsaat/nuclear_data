@@ -16,3 +16,14 @@ svg#pndiagram {
   margin: 0;
   padding: 0;
 }
+
+rect.box {
+  fill: lightgray;
+  stroke: darkslategray;
+  stroke-width: 0.01vw;
+  shape-rendering: crispEdges;
+}
+
+rect.background {
+  fill: #eee;
+}
