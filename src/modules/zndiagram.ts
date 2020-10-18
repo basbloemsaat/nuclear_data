@@ -1,21 +1,11 @@
 import nubase2016 from "./nubase2016";
+import { DiagramBase } from "./diagram";
 import * as d3 from "d3";
-import { BaseType } from "d3";
 
 let data: Array<Object> = nubase2016.full;
 
-class ZNDiagram {
-  _svg: any; // any to be able to add { passive: false } to the wheel event
-  _g_canvas: any;
-  _g_left_axis: any; // any because node().getBBox();
-  _g_right_axis: any; // any because node().getBBox();
-  _g_top_axis: any; // any because node().getBBox();
-  _g_bottom_axis: any; // any because node().getBBox();
+class ZNDiagram extends DiagramBase {
   _zoomlevel: number;
-  _width: number;
-  _height: number;
-  _canvas_width: number;
-  _canvas_height: number;
   _center_x: number;
   _center_y: number;
   _offset_x: number;
@@ -24,22 +14,17 @@ class ZNDiagram {
   _y: d3.ScaleBand<any>;
 
   constructor(svg: d3.Selection<SVGElement, {}, HTMLElement, any>) {
-    this._svg = svg;
+    super(svg);
 
     this._init_chart();
-    this._init_zoom();
+    this._init_event_handlers();
     this._init_boxes();
   }
 
   _init_chart(): void {
+    super._init_chart();
     this._zoomlevel = 1;
-
-    this._g_canvas = this._svg.append("g").classed("canvas", true);
-    this._g_canvas.append("rect").classed("background", true); // background rect as target for wheel event
-    this._g_left_axis = this._svg.append("g").classed("left", true);
-    this._g_right_axis = this._svg.append("g").classed("right", true);
-    this._g_top_axis = this._svg.append("g").classed("top", true);
-    this._g_bottom_axis = this._svg.append("g").classed("bottom", true);
+    this._g_color_legend = this._svg.append("g").classed("colorlegend", true);
 
     let rf = function (element: string): Array<string> {
       return Object.keys(
@@ -62,62 +47,13 @@ class ZNDiagram {
   }
 
   _resize_chart(): void {
-    this._width = this._svg.node().clientWidth;
-    this._height = this._svg.node().clientHeight;
-    this._svg.attr("viewBox", `0 0 ${this._width} ${this._height}`);
+    super._resize_chart();
 
     this._center_x = Math.floor(this._width / 2);
     this._center_y = Math.floor(this._height / 2);
-
-    this._draw_axes(this._width, this._height); // first time drawing axes full height and width are used. First draw is used for measurements;
-
-    let left_axis_width = Math.ceil(
-      this._g_left_axis.node().getBBox()["width"]
-    );
-    let right_axis_width = Math.ceil(
-      this._g_right_axis.node().getBBox()["width"]
-    );
-
-    let top_axis_height = Math.ceil(
-      this._g_top_axis.node().getBBox()["height"]
-    );
-    let bottom_axis_height = Math.ceil(
-      this._g_bottom_axis.node().getBBox()["height"]
-    );
-
-    this._canvas_width = this._width - left_axis_width - right_axis_width;
-    this._canvas_height = this._height - top_axis_height - bottom_axis_height;
-
-    this._g_canvas.attr(
-      "transform",
-      `translate(${left_axis_width},${top_axis_height})`
-    );
-
-    d3.select("rect.background")
-      .attr("width", this._canvas_width)
-      .attr("height", this._canvas_height);
-
-    this._g_left_axis.attr(
-      "transform",
-      `translate(${left_axis_width},${top_axis_height})`
-    );
-
-    this._g_right_axis.attr(
-      "transform",
-      `translate(${left_axis_width + this._canvas_width},${top_axis_height})`
-    );
-
-    this._g_top_axis.attr(
-      "transform",
-      `translate(${left_axis_width},${top_axis_height})`
-    );
-
-    this._g_bottom_axis.attr(
-      "transform",
-      `translate(${left_axis_width},${top_axis_height + this._canvas_height})`
-    );
-
-    this._draw_axes(this._canvas_width, this._canvas_height); // first time drawing axes actual canvas dimensions are used.
+   
+    this._update_color_legend();
+    this._update_boxes();
   }
 
   // draw the axes
@@ -146,7 +82,7 @@ class ZNDiagram {
     this._g_bottom_axis.call(bottom_axis);
   }
 
-  _init_zoom(): void {
+  _init_event_handlers(): void {
     const me = this;
     this._g_canvas.on(
       "wheel",
@@ -161,6 +97,10 @@ class ZNDiagram {
       },
       { passive: false }
     );
+
+    d3.select(window).on("resize", function (e) {
+      me._resize_chart();
+    });
   }
 
   _zoom_in(e: Event): void {
@@ -197,20 +137,75 @@ class ZNDiagram {
       .selectAll("rect.box")
       .attr("width", this._x.bandwidth())
       .attr("height", this._y.bandwidth())
-      .style("fill", (d: any) => {
-        // console.log(d);
-        if(d.half_life == "stbl") {
-          return '#000'
-        }
-        return "#aaa";
-      });
-    // .attr('transform', d => {
-    //   console.log(d);
-    //   return 'translate(0,0)'
-    // })
+      .style("fill", color_box);
 
-    // boxes are filled depending on zoom level
+    // boxes contents depending on zoom level
+  }
+
+  _update_color_legend(): void {
+    this._g_color_legend
+      .append("rect")
+      .attr("x", 100)
+      .attr("y", 100)
+      .attr("width", 100)
+      .attr("height", 100);
   }
 }
+
+let hlcr: any; //d3.ScaleLinear<any,any>;
+{
+  // half life color range
+
+  // get the nubase2016 halflife domain as an array
+  let halflife_domain = data.reduce(
+    (a: any, v: any) => {
+      if (!isNaN(v["half_life_secs"])) {
+        a[0] = Math.min(a[0], v["half_life_secs"] || 1);
+        a[2] = Math.max(a[2], v["half_life_secs"] || 1);
+      }
+      return a;
+    },
+    [1, 2, 1]
+  );
+
+  let hlcr_low = d3.scaleLog(
+    [halflife_domain[1], halflife_domain[0]],
+    ["white", "red"]
+  );
+  let hlcr_high = d3.scaleLog(
+    [halflife_domain[2], halflife_domain[0]],
+    ["red", "green"]
+  );
+
+  // todo, make proper scale. Will do for now
+  hlcr = function (v: any) {
+    if (v < 2) {
+      return hlcr_low(v);
+    }
+    if (v >= 2) {
+      return hlcr_high(v);
+    }
+    // console.log(v);
+    return "red";
+  };
+
+  console.log(halflife_domain);
+  console.log(hlcr(1));
+}
+
+const selected_coloring = "half_life";
+const color_box = function (d: any) {
+  // for now, only one color scale
+  return color_box_half_life(d);
+};
+
+const color_box_half_life = function (d: any) {
+  if (d.half_life == "stbl") {
+    return "#000";
+  } else if (d.half_life == "unk") {
+    return "#0f0";
+  }
+  return hlcr(d.half_life);
+};
 
 export default ZNDiagram;

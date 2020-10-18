@@ -1436,7 +1436,7 @@ let nubase2016_src_txt = `
 092 0330   92As   -30980#     500#                            30#    ms >300ns               12 97Be70i  1997 B- ?;B-n=60#;B-2n=40#
 092 0340   92Se   -46720#     400#                           100#    ms >300ns 0+            12 97Be70i  1997 B- ?;B-n=2#;B-2n=0#
 092 0341W  92Sem  -44780#     400#     1940      50           12     us 4                       12Ka36et 2012 IT=100
-092 0350   92Br   -56233        7                            0.314  s 0.016    (2-)          12          1974 B-=100;B-n=33.1 25;B-2n=0.01#
+092 0350   92Br   -56233        7                            0.314    s 0.016  (2-)          12          1974 B-=100;B-n=33.1 25;B-2n=0.01#
 092 0351W  92Brm  -55571        7       662       1           88     ns 8                       12Ka36et 2012 IT=100
 092 0352W  92Brn  -55095        7      1138       1           85     ns 10                      12Ka36et 2012 IT=100
 092 0360   92Kr   -68769.3      2.7                            1.840  s 0.008  0+            12          1951 B-=100;B-n=0.0332 25
@@ -5659,17 +5659,69 @@ class NuBase2016 {
         let A = Number.parseInt(row.substring(0, 3), 10);
         let Z = Number.parseInt(row.substring(4, 7), 10);
 
-        let half_life:any = row.substring(60, 69).trim();
-        if(half_life != 'stbl') {
-          half_life =  Number.parseFloat(half_life);
+        let element = row.substring(11, 17).trim();
+
+        let half_life: any = row.substring(60, 69).trim();
+        let half_life_unit: string = row.substring(69, 71).trim();
+        let half_life_secs: any = half_life;
+        if (half_life != "stbl") {
+          half_life = Number.parseFloat(half_life);
+
+          if (half_life_unit == "" || half_life_unit == 'n') {
+            half_life_secs = "unk";
+          } else if (half_life_unit == "ys") {
+            half_life_secs = half_life * 1e-24;
+          } else if (half_life_unit == "zs") {
+            half_life_secs = half_life * 1e-21;
+          } else if (half_life_unit == "as") {
+            half_life_secs = half_life * 1e-18;
+          } else if (half_life_unit == "fs") {
+            half_life_secs = half_life * 1e-15;
+          } else if (half_life_unit == "ps") {
+            half_life_secs = half_life * 1e-12;
+          } else if (half_life_unit == "ns") {
+            half_life_secs = half_life * 1e-9;
+          } else if (half_life_unit == "us") {
+            half_life_secs = half_life * 1e-6;
+          } else if (half_life_unit == "ms") {
+            half_life_secs = half_life * 1e-3;
+          } else if (half_life_unit == "s") {
+            half_life_secs = half_life;
+          } else if (half_life_unit == "m") {
+            half_life_secs = half_life * 60;
+          } else if (half_life_unit == "h") {
+            half_life_secs = half_life * 3600;
+          } else if (half_life_unit == "d") {
+            half_life_secs = half_life * 86400;
+          } else if (half_life_unit == "y") {
+            half_life_secs = half_life * 3.154e7;
+          } else if (half_life_unit == "ky") {
+            half_life_secs = half_life * 3.154e7 * 1e3;
+          } else if (half_life_unit == "My") {
+            half_life_secs = half_life * 3.154e7 * 1e6;
+          } else if (half_life_unit == "Gy") {
+            half_life_secs = half_life * 3.154e7 * 1e9;
+          } else if (half_life_unit == "Ty") {
+            half_life_secs = half_life * 3.154e7 * 1e12;
+          } else if (half_life_unit == "Py") {
+            half_life_secs = half_life * 3.154e7 * 1e15;
+          } else if (half_life_unit == "Ey") {
+            half_life_secs = half_life * 3.154e7 * 1e18;
+          } else if (half_life_unit == "Yy") {
+            half_life_secs = half_life * 3.154e7 * 1e21;
+          } else if (half_life_unit == "Zy") {
+            half_life_secs = half_life * 3.154e7 * 1e24;
+          } else {
+            console.log(element, half_life_unit);
+          }
         }
 
         let rv = {
           A: A, // mass number
           Z: Z, // atomic number, number of protons
-          N: A-Z, // number of neutrons
+          N: A - Z, // number of neutrons
           level: row.substring(7, 9).trim(), //?
-          element: row.substring(11, 17).trim(),
+          element: element,
           mass_excess: Number.parseFloat(row.substring(18, 29).trim()), //keV
           mass_excess_s: Number.parseFloat(row.substring(29, 38).trim()),
           exitation_energy: row.substring(38, 48).trim(), //keV
@@ -5678,6 +5730,7 @@ class NuBase2016 {
           half_life: half_life,
           half_life_unit: row.substring(69, 71).trim(),
           half_life_s: Number.parseFloat(row.substring(72, 78)),
+          half_life_secs: half_life_secs,
           Jpi: row.substring(79, 92).trim(),
           ens: Number.parseInt(row.substring(93, 95)), //year, 2 digits
           reference: row.substring(96, 103).trim(),

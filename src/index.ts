@@ -1,2 +1,2 @@
-import "./css/zndiagram.css"
-import "./modules/controller"
+import "./css/main.css"
+

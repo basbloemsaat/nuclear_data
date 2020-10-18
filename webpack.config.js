@@ -3,9 +3,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: {
+    index: "./src/index.ts",
+    hldistribution: "./src/hldistribution.ts",
+    zndiagram: "./src/zndiagram.ts",
+  },
   output: {
-    filename: "bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "docs"),
   },
   module: {
@@ -24,5 +28,21 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "src/index.ejs",
+      filename: "index.html",
+      chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/hldistribution.ejs",
+      filename: "hldistribution.html",
+      chunks: ["hldistribution"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "src/zndiagram.ejs",
+      filename: "zndiagram.html",
+      chunks: ["zndiagram"],
+    }),
+  ],
 };
