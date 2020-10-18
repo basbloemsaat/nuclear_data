@@ -1,7 +1,7 @@
 # nuclear_data
 play around with nuclear data
 
-
+display: https://basbloemsaat.github.io/nuclear_data/
 
 
 sources:
