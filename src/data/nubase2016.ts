@@ -5646,6 +5646,20 @@ class NuBase2016 {
     return this._datafull;
   }
 
+  get half_life_domain():Array<number> {
+    let hld = this.full.reduce(
+      (a: any, v: any) => {
+        if (!isNaN(v["half_life_secs"])) {
+          a[0] = Math.min(a[0], v["half_life_secs"] || 1);
+          a[1] = Math.max(a[1], v["half_life_secs"] || 1);
+        }
+        return a;
+      },
+      [1, 1]
+    );
+    return hld;
+  }
+
   _parse_raw_txt(raw: String) {
     let nubase2016_txt = nubase2016_src_txt.split(/[\r\n]+/);
 

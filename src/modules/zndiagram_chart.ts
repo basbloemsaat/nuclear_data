@@ -1,4 +1,4 @@
-import nubase2016 from "./nubase2016";
+import nubase2016 from "../data/nubase2016";
 import { DiagramBase } from "./diagram";
 import * as d3 from "d3";
 
@@ -51,7 +51,7 @@ class ZNDiagram extends DiagramBase {
 
     this._center_x = Math.floor(this._width / 2);
     this._center_y = Math.floor(this._height / 2);
-   
+
     this._update_color_legend();
     this._update_boxes();
   }
@@ -157,24 +157,15 @@ let hlcr: any; //d3.ScaleLinear<any,any>;
   // half life color range
 
   // get the nubase2016 halflife domain as an array
-  let halflife_domain = data.reduce(
-    (a: any, v: any) => {
-      if (!isNaN(v["half_life_secs"])) {
-        a[0] = Math.min(a[0], v["half_life_secs"] || 1);
-        a[2] = Math.max(a[2], v["half_life_secs"] || 1);
-      }
-      return a;
-    },
-    [1, 2, 1]
-  );
+  let halflife_domain = nubase2016.half_life_domain;
 
   let hlcr_low = d3.scaleLog(
     [halflife_domain[1], halflife_domain[0]],
     ["white", "red"]
   );
   let hlcr_high = d3.scaleLog(
-    [halflife_domain[2], halflife_domain[0]],
-    ["red", "green"]
+    [halflife_domain[1], halflife_domain[0]],
+    ["blue", "green"]
   );
 
   // todo, make proper scale. Will do for now

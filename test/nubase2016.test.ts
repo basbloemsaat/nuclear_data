@@ -1,4 +1,4 @@
-import nubase2016 from "../src/modules/nubase2016";
+import nubase2016 from "../src/data/nubase2016";
 import { expect } from "chai";
 
 describe("nubase 2016", function () {
