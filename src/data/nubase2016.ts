@@ -5631,22 +5631,29 @@ let nubase2016_src_txt = `
 295 1180   295Ei  201510#     640#                            10#    ms                         04Og05td      A ?
 `;
 
+export interface Isotope {
+  A: number;
+  Z: number;
+  N: number;
+  half_life_secs: number;
+}
+
 class NuBase2016 {
   _dataraw: String;
-  _datafull: Array<Object>;
+  _datafull: Array<Isotope>;
 
   constructor() {
     this._dataraw = nubase2016_src_txt;
   }
 
-  get full(): Array<Object> {
+  get full(): Array<Isotope> {
     if (!this._datafull) {
       this._parse_raw_txt(this._dataraw);
     }
     return this._datafull;
   }
 
-  get half_life_domain():Array<number> {
+  get half_life_domain(): Array<number> {
     let hld = this.full.reduce(
       (a: any, v: any) => {
         if (!isNaN(v["half_life_secs"])) {
@@ -5677,12 +5684,12 @@ class NuBase2016 {
 
         let half_life: any = row.substring(60, 69).trim();
         let half_life_unit: string = row.substring(69, 71).trim();
-        let half_life_secs: any = half_life;
+        let half_life_secs: number; // = half_life;
         if (half_life != "stbl") {
           half_life = Number.parseFloat(half_life);
 
-          if (half_life_unit == "" || half_life_unit == 'n') {
-            half_life_secs = "unk";
+          if (half_life_unit == "" || half_life_unit == "n") {
+            half_life_secs = 0; // unknown
           } else if (half_life_unit == "ys") {
             half_life_secs = half_life * 1e-24;
           } else if (half_life_unit == "zs") {

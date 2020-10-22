@@ -8,7 +8,6 @@ body {
 svg.singlechart {
   width: 98vw;
   height: 98vh;
-  border: 1px solid red;
   margin: 0;
   padding: 0;
 }
