@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: maria12345
+      MYSQL_DATABASE: spacedb
+      MYSQL_USER: spacedb
+      MYSQL_PASSWORD: spacedb
+
+    volumes:
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./database/meta.sql:/docker-entrypoint-initdb.d/2.sql
+      - ./database/launch.sql:/docker-entrypoint-initdb.d/3.sql
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  db_data: {}
