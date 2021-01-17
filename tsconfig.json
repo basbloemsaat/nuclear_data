@@ -8,11 +8,8 @@
     "removeComments": true,
     "sourceMap": true,
     "target": "es6",
-    "moduleResolution": "node"
+    // "moduleResolution": "Node"
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": [
-    "fe_old",
-    "node_modules",
-    "pre_docker"
-  ]
+  "exclude": ["fe_old", "pre_docker", "node_modules"]
 }
