@@ -14,12 +14,6 @@ module.exports = {
         use: "ts-loader",
         exclude: [/node_modules/, /pre_docker/],
       },
-
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-        exclude: [/node_modules/, /pre_docker/],
-      },
       {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],

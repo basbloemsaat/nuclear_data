@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-class DiagramBase {
+class Diagram {
   _svg: any; // any to be able to add { passive: false } to the wheel event
 
   _g_canvas: any;
@@ -87,4 +87,4 @@ class DiagramBase {
   _draw_axes(width: number, height: number): void {}
 }
 
-export { DiagramBase };
+export { Diagram };
