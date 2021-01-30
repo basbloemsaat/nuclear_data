@@ -1,6 +1,35 @@
 import * as d3 from "d3";
 
+// This is a very roundabout way to get the data in. The reason is that
+// I want the nubase2016.txt to be unaltered.
+
+// if the nubase data is loaded: exec the callback with the data. Else
+// store the callback in the queue and exec it when the data is loaded
+let f_queue: Array<(data: any) => void> = [];
+let nubase2016_exec = (callback: (data: any) => void) => {
+  if (!loaded) {
+    f_queue.push(callback);
+  } else {
+    callback(nubase_obj);
+  }
+};
+
+let exec_queue = () => {
+  for (let i = 0; i < f_queue.length; i++) {
+    f_queue[i](nubase_obj);
+  }
+};
+
+let loading = false;
+let loaded = false;
+
 let nubase2016_src_txt = "";
+let nubase_obj:NuBase2016;
+
+d3.text("/data/nubase2016.txt").then(function (text) {
+  nubase_obj = new NuBase2016(text);
+  exec_queue();
+});
 
 export interface Isotope {
   A: number; // mass number (z+n)
@@ -9,14 +38,12 @@ export interface Isotope {
   half_life_secs: number;
 }
 
-
-
 class NuBase2016 {
   _dataraw: String;
   _datafull: Array<Isotope>;
 
-  constructor() {
-    // this._dataraw = nubase2016_src_txt;
+  constructor(source_txt:string) {
+    this._dataraw = source_txt;
   }
 
   get full(): Array<Isotope> {
@@ -41,7 +68,7 @@ class NuBase2016 {
   }
 
   _parse_raw_txt(raw: String) {
-    let nubase2016_txt = nubase2016_src_txt.split(/[\r\n]+/);
+    let nubase2016_txt = raw.split(/[\r\n]+/);
 
     this._datafull = nubase2016_txt
       .filter((e, i) => {
@@ -137,30 +164,4 @@ class NuBase2016 {
   }
 }
 
-// if the nubase data is loaded: exec the callback with the data. Else 
-// store the callback in the queue and exec it when the data is loaded
-let f_queue: Array<(data:any) => void> = [];
-let nubase2016_exec = (callback: (data:any) => void) => {
-  if(!loaded) {
-    f_queue.push(callback);
-  }
-  else {
-    callback(null);
-  }
-};
-
-let exec_queue = () => {
-  for (let i=0;i<f_queue.length;i++) {
-    f_queue[i](null);
-  }
-}
-
-let loading = false;
-let loaded = false;
-
-d3.text("/data/nubase2016.txt").then(function (text) {
-  nubase2016_src_txt = text;
-  exec_queue();
-});
-
-export {nubase2016_exec}
+export { nubase2016_exec, NuBase2016 };
