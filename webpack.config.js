@@ -7,6 +7,10 @@ module.exports = {
     index: "./source/index.ts",
     chart_of_nucleides: "./source/chart_of_nucleides.ts",
   },
+  output: {
+    filename: "[name].js",
+    path: path.resolve(__dirname, "docs/"),
+  },
   module: {
     rules: [
       {
@@ -23,6 +27,9 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "source/index.ejs",
@@ -35,4 +42,9 @@ module.exports = {
       chunks: ["chart_of_nucleides"],
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, "docs"),
+    compress: true,
+    port: 8080,
+  },
 };
