@@ -24,7 +24,7 @@ let loading = false;
 let loaded = false;
 
 let nubase2016_src_txt = "";
-let nubase_obj:NuBase2016;
+let nubase_obj: NuBase2016;
 
 d3.text("/data/nubase2016.txt").then(function (text) {
   nubase_obj = new NuBase2016(text);
@@ -42,7 +42,7 @@ class NuBase2016 {
   _dataraw: String;
   _datafull: Array<Isotope>;
 
-  constructor(source_txt:string) {
+  constructor(source_txt: string) {
     this._dataraw = source_txt;
   }
 
@@ -53,19 +53,19 @@ class NuBase2016 {
     return this._datafull;
   }
 
-  get half_life_domain(): Array<number> {
-    let hld = this.full.reduce(
-      (a: any, v: any) => {
-        if (!isNaN(v["half_life_secs"])) {
-          a[0] = Math.min(a[0], v["half_life_secs"] || 1);
-          a[1] = Math.max(a[1], v["half_life_secs"] || 1);
-        }
-        return a;
-      },
-      [1, 1]
-    );
-    return hld;
-  }
+  // get half_life_domain(): Array<number> {
+  //   let hld = this.full.reduce(
+  //     (a: any, v: any) => {
+  //       if (!isNaN(v["half_life_secs"])) {
+  //         a[0] = Math.min(a[0], v["half_life_secs"] || 1);
+  //         a[1] = Math.max(a[1], v["half_life_secs"] || 1);
+  //       }
+  //       return a;
+  //     },
+  //     [1, 1]
+  //   );
+  //   return hld;
+  // }
 
   _parse_raw_txt(raw: String) {
     let nubase2016_txt = raw.split(/[\r\n]+/);
@@ -85,6 +85,7 @@ class NuBase2016 {
         let half_life: any = row.substring(60, 69).trim();
         let half_life_unit: string = row.substring(69, 71).trim();
         let half_life_secs: number; // = half_life;
+        let log = false;
         if (half_life != "stbl") {
           half_life = Number.parseFloat(half_life);
 
@@ -133,6 +134,7 @@ class NuBase2016 {
           } else if (half_life_unit == "Zy") {
             half_life_secs = half_life * 3.154e7 * 1e24;
           } else {
+            log = true;
             console.log(element, half_life_unit);
           }
         }
@@ -158,6 +160,10 @@ class NuBase2016 {
           discovery: Number.parseInt(row.substring(104, 109)),
           decay: row.substring(110).trim(),
         };
+
+        if (log) {
+          console.log(rv);
+        }
 
         return rv;
       });

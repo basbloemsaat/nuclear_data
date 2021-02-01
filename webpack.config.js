@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./source/index.ts",
     chart_of_nucleides: "./source/chart_of_nucleides.ts",
+    half_life_distribution: "./source/half_life_distribution.ts",
   },
   output: {
     filename: "[name].js",
@@ -40,6 +41,11 @@ module.exports = {
       template: "source/chart_of_nucleides.ejs",
       filename: "chart_of_nucleides.html",
       chunks: ["chart_of_nucleides"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "source/half_life_distribution.ejs",
+      filename: "half_life_distribution.html",
+      chunks: ["half_life_distribution"],
     }),
   ],
   devServer: {
