@@ -8,15 +8,16 @@ const diag = new Diagram(d3.select("svg#chart_halflifes"));
 let init_function = (data: NuBase2016) => {
   let full = data.full;
 
-  let hl = full.reduce((a:{[key:string]:Array<any>}, e:Isotope) => {
-      console.log()
-    //   if(a[e['half_life_unit']]) {
-
-    //   }
+  let hl_unitcount = full.reduce((a: { [key: string]: number }, e: Isotope) => {
+    if (!a[e["half_life_unit"]]) {
+      a[e["half_life_unit"]] = 0;
+    }
+    a[e["half_life_unit"]]++;
     return a;
   }, {});
+  console.log(hl_unitcount);
 
-  console.log(hl);
+
 };
 
 nubase2016_exec(init_function);

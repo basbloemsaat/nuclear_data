@@ -31,11 +31,12 @@ d3.text("/data/nubase2016.txt").then(function (text) {
   exec_queue();
 });
 
-export interface Isotope {
+interface Isotope {
   A: number; // mass number (z+n)
   Z: number; // atomic number / number of protons
   N: number; // number of neutrons
   half_life_secs: number;
+  half_life_unit: string;
 }
 
 class NuBase2016 {
@@ -90,7 +91,7 @@ class NuBase2016 {
           half_life = Number.parseFloat(half_life);
 
           if (half_life_unit == "" || half_life_unit == "n") {
-            half_life_secs = 0; // unknown
+            half_life_secs = null; // unknown
           } else if (half_life_unit == "ys") {
             half_life_secs = half_life * 1e-24;
           } else if (half_life_unit == "zs") {
@@ -116,23 +117,23 @@ class NuBase2016 {
           } else if (half_life_unit == "d") {
             half_life_secs = half_life * 86400;
           } else if (half_life_unit == "y") {
-            half_life_secs = half_life * 3.154e7;
+            half_life_secs = half_life * 31556926;
           } else if (half_life_unit == "ky") {
-            half_life_secs = half_life * 3.154e7 * 1e3;
+            half_life_secs = half_life * 31556926 * 1e3;
           } else if (half_life_unit == "My") {
-            half_life_secs = half_life * 3.154e7 * 1e6;
+            half_life_secs = half_life * 31556926 * 1e6;
           } else if (half_life_unit == "Gy") {
-            half_life_secs = half_life * 3.154e7 * 1e9;
+            half_life_secs = half_life * 31556926 * 1e9;
           } else if (half_life_unit == "Ty") {
-            half_life_secs = half_life * 3.154e7 * 1e12;
+            half_life_secs = half_life * 31556926 * 1e12;
           } else if (half_life_unit == "Py") {
-            half_life_secs = half_life * 3.154e7 * 1e15;
+            half_life_secs = half_life * 31556926 * 1e15;
           } else if (half_life_unit == "Ey") {
-            half_life_secs = half_life * 3.154e7 * 1e18;
+            half_life_secs = half_life * 31556926 * 1e18;
           } else if (half_life_unit == "Yy") {
-            half_life_secs = half_life * 3.154e7 * 1e21;
+            half_life_secs = half_life * 31556926 * 1e21;
           } else if (half_life_unit == "Zy") {
-            half_life_secs = half_life * 3.154e7 * 1e24;
+            half_life_secs = half_life * 31556926 * 1e24;
           } else {
             log = true;
             console.log(element, half_life_unit);
@@ -170,4 +171,4 @@ class NuBase2016 {
   }
 }
 
-export { nubase2016_exec, NuBase2016 };
+export { nubase2016_exec, NuBase2016, Isotope };
