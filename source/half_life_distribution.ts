@@ -17,7 +17,10 @@ let init_function = (data: NuBase2016) => {
   }, {});
   console.log(hl_unitcount);
 
-
+  // @ts-expect-error
+  let bin = d3.bin().value((d: Isotope) => d.half_life_secs);
+  // @ts-expect-error
+  console.log(bin(full));
 };
 
 nubase2016_exec(init_function);
