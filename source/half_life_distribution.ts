@@ -1,13 +1,16 @@
 import "./site";
 import { Diagram } from "./modules/diagram";
 import * as d3 from "d3";
-import { nubase2016_exec, NuBase2016, Isotope } from "./modules/nubase2016";
+import { nubase2016_exec, NuBase2016 } from "./modules/nubase2016";
+import {Isotope} from "./modules/isotope";
 
 const diag = new Diagram(d3.select("svg#chart_halflifes"));
 
 let init_function = (data: NuBase2016) => {
   let full = data.full;
 
+
+  return;
   let min_hl = 1;
   let max_hl = 1;
 
@@ -41,7 +44,7 @@ let init_function = (data: NuBase2016) => {
   // let scale_color = d3.scaleLog().domain([min_hl, max_hl]).range();
 
   let scale_map_color = d3.scaleLog().domain([min_hl, max_hl]).range([0, 100]);
-  var scale_color = d3.scaleSequential(d3.interpolateTurbo).domain([0, 100]);
+  var scale_color = d3.scaleSequential(d3.interpolateRdYlBu).domain([0, 100]);
 
   let g_axis = svg.append("g").attr("transform", "translate(0,20)");
   let axis = d3.axisTop(scale_pos);
