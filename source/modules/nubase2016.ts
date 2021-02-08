@@ -30,14 +30,6 @@ d3.text("./data/nubase2016.txt").then(function (text) {
   exec_queue();
 });
 
-// interface Isotope {
-//   A: number; // mass number (z+n)
-//   Z: number; // atomic number / number of protons
-//   N: number; // number of neutrons
-//   half_life_secs: number;
-//   half_life_unit: string;
-// }
-
 class NuBase2016 {
   _dataraw: String;
   _datafull: Array<Isotope>;
@@ -61,6 +53,10 @@ class NuBase2016 {
       let Z = Number.parseInt(row.substring(4, 7), 10);
 
       let iso = new Isotope(Z, A - Z);
+
+      iso.half_life = row.substring(60, 69).trim();
+      iso.half_life_unit = row.substring(69, 71).trim();
+      iso.half_life_s = Number.parseFloat(row.substring(72, 78));
 
       // let element = row.substring(11, 17).trim();
 
