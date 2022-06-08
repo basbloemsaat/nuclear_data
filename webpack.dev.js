@@ -7,14 +7,14 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     static: {
-      directory: path.join(__dirname, "public"),
+      directory: path.join(__dirname, "docs"),
     },
     compress: false,
     port: 13080,
   },
 
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/docs/`,
     filename: "[name].js",
     publicPath: "",
   },

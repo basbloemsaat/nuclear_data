@@ -10,7 +10,7 @@ module.exports = merge(common, {
     }),
   ],
   output: {
-    path: `${__dirname}/dist`,
+    path: `${__dirname}/docs/`,
     filename: "[name].js",
     publicPath: "",
   },

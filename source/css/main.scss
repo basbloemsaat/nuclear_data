@@ -1,3 +1,27 @@
+body,
+html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
 footer {
   text-align: right;
+}
+
+svg {
+  border: 0px solid green;
+  margin: 1vw;
+  width: 98vw;
+  height: 90vh;
+}
+
+rect.cell {
+  fill: red;
+
+  &.stable {
+    fill: black;
+  }
 }
