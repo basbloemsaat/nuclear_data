@@ -1,7 +1,7 @@
 import * as d3 from "d3";
 import "../css/main.scss";
 
-import nubase2016 from "./modules/nubase2016";
+import { nubase2020_data } from "./modules/nubase2020";
 import { Isotope } from "./modules/isotope";
 
 const config = {
@@ -10,9 +10,12 @@ const config = {
 };
 
 const svg = d3.select("main").append("svg");
-
 let width = svg.node().clientWidth;
 let height = svg.node().clientHeight;
+
+const init = () => {};
+
+init();
 
 const x = d3
   .scaleBand()
@@ -71,45 +74,46 @@ canvas_g.attr(
   `translate(${config.margin + ywidth},${config.large_margin})`
 );
 
-nubase2016((data: any) => {
-  let m = d3.group(data, (d: Isotope) => d.Z);
+const data = nubase2020_data.map(
+  (d) => new Isotope(d.atomic_number_ZZZ, d.mass_number_AAA, d)
+);
+console.log(data[0]);
 
-  let colorcount = 9;
-  let mmm = Array(colorcount)
-    .fill("")
-    .map((d, i) => d3.interpolateRdYlBu(i / colorcount));
-  const hlcolor = d3
-    .scaleQuantile()
-    .domain(data.map((d: Isotope) => d.half_life))
+let m = d3.group(data, (d: Isotope) => d.Z);
 
-    //@ts-expect-error
-    .range(mmm);
-    // .range(d3.schemeRdYlBu[9]); // a bit less pronounced
-  canvas_g
-    .selectAll("g.row")
-    .data(m)
-    .join("g")
-    .classed("row", true)
-    .selectAll("rect.cell")
-    .data((d) => {
-      return d[1];
-    })
-    .join("rect")
-    .classed("cell", true)
-    .classed("stable", (d) => d.stable)
-    .attr("x", (d) => x(`${d.A}`))
-    .attr("y", (d) => y(`${d.Z}`))
-    .attr("width", x.bandwidth())
-    .attr("height", y.bandwidth())
-    .style("fill", (d) => {
-      if (d.stable) {
-        return;
-      }
-      return hlcolor(d.half_life);
-    })
-    .on("mouseover", (d, e) => {
-      console.log(e);
-    });
-});
+let colorcount = 15;
+let mmm = Array(colorcount)
+  .fill("")
+  .map((d, i) => d3.interpolateRdYlBu(i / colorcount));
+const hlcolor = d3
+  .scaleQuantile()
+  .domain(data.map((d: Isotope) => d.half_life))
+  //@ts-expect-error
+  .range(mmm);
+canvas_g
+  .selectAll("g.row")
+  .data(m)
+  .join("g")
+  .classed("row", true)
+  .selectAll("rect.cell")
+  .data((d) => {
+    return d[1];
+  })
+  .join("rect")
+  .classed("cell", true)
+  .classed("stable", (d) => d.stable)
+  .attr("x", (d) => x(`${d.A}`))
+  .attr("y", (d) => y(`${d.Z}`))
+  .attr("width", x.bandwidth())
+  .attr("height", y.bandwidth())
+  .style("fill", (d) => {
+    if (d.stable) {
+      return;
+    }
+    return hlcolor(d.half_life);
+  })
+  .on("mouseover", (d, e) => {
+    console.log(e);
+  });
 
 console.log(Array.from(Array(5).keys()).map((e) => `${e}`));

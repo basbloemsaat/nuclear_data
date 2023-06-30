@@ -1,9 +1,0 @@
-rect.spacer {
-    width: 20px;
-    height: 20px;
-    visibility: hidden;
-}
-
-rect.bar {
-    fill: red;
-}
