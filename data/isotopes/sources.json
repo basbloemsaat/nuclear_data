@@ -36,11 +36,5 @@
       "coverage": "All 118 chemical elements H to Og",
       "reference": "Wikipedia List of Chemical Elements"
     }
-  },
-  "metadata": {
-    "file_purpose": "Centralized source metadata for isotope database",
-    "creation_date": "2025-11-15",
-    "version": "1.0",
-    "note": "This file contains metadata for all data sources used in the isotope database. Individual isotope files reference these sources by key."
   }
 }
