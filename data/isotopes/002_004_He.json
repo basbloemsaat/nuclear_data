@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 2,
+    "mass_number": 4,
+    "symbol": "He",
+    "element_name": "Helium",
+    "isomer_state": null,
+    "isotope_notation": "4He"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "2424.9158",
+        "mass_uncertainty_keV": "0.0001",
+        "half_life": "STABLE",
+        "spin_parity": "0+",
+        "discovery_year": 98.0,
+        "decay_modes": "IS=99.99982"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek hélios 'sun'",
+        "group": "18",
+        "period": 1,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "4.0026",
+        "density": "0.0001785",
+        "melting_point": "-",
+        "boiling_point": "4.22",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

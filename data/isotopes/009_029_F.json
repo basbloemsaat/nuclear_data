@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 9,
+    "mass_number": 29,
+    "symbol": "F",
+    "element_name": "Fluorine",
+    "isomer_state": null,
+    "isotope_notation": "29F"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "40150",
+        "mass_uncertainty_keV": "530",
+        "half_life": "2.5ms0.3",
+        "spin_parity": null,
+        "discovery_year": 530.0,
+        "decay_modes": "β−=100;β−n=6040;β−2n?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Latin fluo 'to flow'",
+        "group": "17",
+        "period": 2,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "18.998",
+        "density": "0.001696",
+        "melting_point": "53.53",
+        "boiling_point": "85.03",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

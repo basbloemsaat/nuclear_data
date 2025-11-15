@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 85,
+    "mass_number": 227,
+    "symbol": "At",
+    "element_name": "Astatine",
+    "isomer_state": "t",
+    "isotope_notation": "227Att"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "37430#",
+        "mass_uncertainty_keV": "300#",
+        "half_life": ">300ns",
+        "spin_parity": null,
+        "discovery_year": 16.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek ástatos 'unstable'",
+        "group": "17",
+        "period": 6,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[210]",
+        "density": "8.91-8.95",
+        "melting_point": "575",
+        "boiling_point": "610",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

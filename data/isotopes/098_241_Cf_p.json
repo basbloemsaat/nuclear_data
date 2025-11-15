@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 98,
+    "mass_number": 241,
+    "symbol": "Cf",
+    "element_name": "Californium",
+    "isomer_state": "p",
+    "isotope_notation": "241Cfp"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "59480#",
+        "mass_uncertainty_keV": "200#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 15.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "California",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[251]",
+        "density": "15.1",
+        "melting_point": "1173",
+        "boiling_point": "1743",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 90,
+    "mass_number": 213,
+    "symbol": "Th",
+    "element_name": "Thorium",
+    "isomer_state": "m",
+    "isotope_notation": "213Thm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "13300",
+        "mass_uncertainty_keV": "9",
+        "half_life": null,
+        "spin_parity": "(13/2)+",
+        "discovery_year": null,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Thor Norse god of thunder",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "232.04",
+        "density": "11.7",
+        "melting_point": "2115",
+        "boiling_point": "5061",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

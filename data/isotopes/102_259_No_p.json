@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 102,
+    "mass_number": 259,
+    "symbol": "No",
+    "element_name": "Nobelium",
+    "isomer_state": "p",
+    "isotope_notation": "259Nop"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "94310#",
+        "mass_uncertainty_keV": "150#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Alfred Nobel",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[259]",
+        "density": "9.9",
+        "melting_point": "1100",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

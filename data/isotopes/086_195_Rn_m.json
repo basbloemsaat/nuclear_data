@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 86,
+    "mass_number": 195,
+    "symbol": "Rn",
+    "element_name": "Radon",
+    "isomer_state": "m",
+    "isotope_notation": "195Rnm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "5131",
+        "mass_uncertainty_keV": "17",
+        "half_life": "6ms3",
+        "spin_parity": "13/2+",
+        "discovery_year": 5131.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Radium emanation",
+        "group": "18",
+        "period": 6,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[222]",
+        "density": "0.00973",
+        "melting_point": "202",
+        "boiling_point": "211.3",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

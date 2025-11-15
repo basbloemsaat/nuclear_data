@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 116,
+    "mass_number": 289,
+    "symbol": "Lv",
+    "element_name": "Livermorium",
+    "isomer_state": "v",
+    "isotope_notation": "289Lvv"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "184460#",
+        "mass_uncertainty_keV": "500#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Lawrence Livermore National Laboratory",
+        "group": "16",
+        "period": 7,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[293]",
+        "density": "12.9",
+        "melting_point": "700",
+        "boiling_point": "1100",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

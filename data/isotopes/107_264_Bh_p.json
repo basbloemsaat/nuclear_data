@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 107,
+    "mass_number": 264,
+    "symbol": "Bh",
+    "element_name": "Bohrium",
+    "isomer_state": "p",
+    "isotope_notation": "264Bhp"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "116290#",
+        "mass_uncertainty_keV": "230#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Niels Bohr",
+        "group": "7",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[270]",
+        "density": "26-27",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

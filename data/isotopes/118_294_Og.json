@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 118,
+    "mass_number": 294,
+    "symbol": "Og",
+    "element_name": "Oganesson",
+    "isomer_state": null,
+    "isotope_notation": "294Og"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "199320#",
+        "mass_uncertainty_keV": "550#",
+        "half_life": "0.7ms0.3",
+        "spin_parity": "0+",
+        "discovery_year": 2004.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Yuri Oganessian",
+        "group": "18",
+        "period": 7,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[294]",
+        "density": "7",
+        "melting_point": "325",
+        "boiling_point": "450",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

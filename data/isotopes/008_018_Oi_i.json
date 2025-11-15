@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 8,
+    "mass_number": 18,
+    "symbol": "Oi",
+    "element_name": "Oxygen",
+    "isomer_state": "i",
+    "isotope_notation": "18Oii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "15495",
+        "mass_uncertainty_keV": "20",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 20.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": null
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 94,
+    "mass_number": 240,
+    "symbol": "Pu",
+    "element_name": "Plutonium",
+    "isomer_state": "u",
+    "isotope_notation": "240Puu"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "50125.3",
+        "mass_uncertainty_keV": "1.1",
+        "half_life": null,
+        "spin_parity": "0+",
+        "discovery_year": 1949.0,
+        "decay_modes": "α=100;SF=5.796e-639;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Pluto dwarf planet",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[244]",
+        "density": "19.85",
+        "melting_point": "912.5",
+        "boiling_point": "3501",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

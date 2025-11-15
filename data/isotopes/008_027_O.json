@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 8,
+    "mass_number": 27,
+    "symbol": "O",
+    "element_name": "Oxygen",
+    "isomer_state": null,
+    "isotope_notation": "27O"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "44670#",
+        "mass_uncertainty_keV": "500#",
+        "half_life": "<260ns",
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek oxy- + -gen 'acid-forming'",
+        "group": "16",
+        "period": 2,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "15.999",
+        "density": "0.001429",
+        "melting_point": "54.36",
+        "boiling_point": "90.20",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

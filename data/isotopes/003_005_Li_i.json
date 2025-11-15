@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 3,
+    "mass_number": 5,
+    "symbol": "Li",
+    "element_name": "Lithium",
+    "isomer_state": "i",
+    "isotope_notation": "5Lii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "11680",
+        "mass_uncertainty_keV": "50",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 50.0,
+        "decay_modes": "p=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek líthos 'stone'",
+        "group": "1",
+        "period": 2,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "6.94",
+        "density": "0.534",
+        "melting_point": "453.69",
+        "boiling_point": "1560",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

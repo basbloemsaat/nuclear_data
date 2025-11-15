@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 112,
+    "mass_number": 277,
+    "symbol": "Cn",
+    "element_name": "Copernicium",
+    "isomer_state": "n",
+    "isotope_notation": "277Cnn"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "152330#",
+        "mass_uncertainty_keV": "150#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 790.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Nicolaus Copernicus",
+        "group": "12",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[285]",
+        "density": "14.0",
+        "melting_point": "283",
+        "boiling_point": "340",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

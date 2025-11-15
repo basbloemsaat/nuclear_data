@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 19,
+    "mass_number": 33,
+    "symbol": "K",
+    "element_name": "Potassium",
+    "isomer_state": null,
+    "isotope_notation": "33K"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "7540#",
+        "mass_uncertainty_keV": "200#",
+        "half_life": "<25ns",
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Neo-Latin potassa 'potash'",
+        "group": "1",
+        "period": 4,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "39.098",
+        "density": "0.89",
+        "melting_point": "336.53",
+        "boiling_point": "1032",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

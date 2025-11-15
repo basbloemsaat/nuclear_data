@@ -1,0 +1,27 @@
+{
+  "database_info": {
+    "title": "Combined Nuclear Isotope Database",
+    "description": "Individual isotope files combining NUBASE2020 nuclear data with Wikipedia chemical element properties",
+    "total_isotopes": 1291,
+    "creation_date": "2025-11-15"
+  },
+  "file_structure": {
+    "isotope_files": {
+      "naming_convention": "ZZZ_AAA_Symbol_isomer.json",
+      "total_files": 1291,
+      "average_file_size_bytes": 903,
+      "total_size_kb": 1112.2
+    },
+    "metadata_files": {
+      "sources.json": "Centralized source metadata for all data sources",
+      "index.json": "Database summary and file structure information"
+    }
+  },
+  "data_coverage": {
+    "atomic_number_range": "0-118",
+    "mass_number_range": "1-295",
+    "elements_with_chemical_data": 1259,
+    "elements_nuclear_only": 32
+  },
+  "usage_note": "Source metadata is centralized in sources.json. Individual isotope files reference sources by key ('nubase2020', 'wikipedia'). Metadata removed from individual files for optimal storage."
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 104,
+    "mass_number": 258,
+    "symbol": "Rf",
+    "element_name": "Rutherfordium",
+    "isomer_state": "m",
+    "isotope_notation": "258Rfm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "97540#",
+        "mass_uncertainty_keV": "300#",
+        "half_life": "3.4ms1.7",
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": "IT=?;α?;β+?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Ernest Rutherford",
+        "group": "4",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[267]",
+        "density": "17",
+        "melting_point": "2400",
+        "boiling_point": "5800",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

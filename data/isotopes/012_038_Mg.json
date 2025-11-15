@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 12,
+    "mass_number": 38,
+    "symbol": "Mg",
+    "element_name": "Magnesium",
+    "isomer_state": null,
+    "isotope_notation": "38Mg"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "34070#",
+        "mass_uncertainty_keV": "500#",
+        "half_life": "2#ms>260ns",
+        "spin_parity": "0+",
+        "discovery_year": 17.0,
+        "decay_modes": "β−=100#;β−n?;β−2n?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Magnesia region Greece",
+        "group": "2",
+        "period": 3,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "24.305",
+        "density": "1.738",
+        "melting_point": "923",
+        "boiling_point": "1363",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

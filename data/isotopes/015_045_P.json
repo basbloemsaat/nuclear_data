@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 15,
+    "mass_number": 45,
+    "symbol": "P",
+    "element_name": "Phosphorus",
+    "isomer_state": null,
+    "isotope_notation": "45P"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "15960#",
+        "mass_uncertainty_keV": "500#",
+        "half_life": "10#ms>200ns",
+        "spin_parity": null,
+        "discovery_year": 8.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek phōsphóros 'light-bearing'",
+        "group": "15",
+        "period": 3,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "30.974",
+        "density": "1.823",
+        "melting_point": "317.30",
+        "boiling_point": "550",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

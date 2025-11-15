@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 110,
+    "mass_number": 273,
+    "symbol": "Ds",
+    "element_name": "Darmstadtium",
+    "isomer_state": "s",
+    "isotope_notation": "273Dss"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "138290#",
+        "mass_uncertainty_keV": "140#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 240.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Darmstadt Germany",
+        "group": "10",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[281]",
+        "density": "26-27",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

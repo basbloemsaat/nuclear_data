@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 83,
+    "mass_number": 9,
+    "symbol": "Bi",
+    "element_name": "Bismuth",
+    "isomer_state": "i",
+    "isotope_notation": "9Bii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "27071.0",
+        "mass_uncertainty_keV": "2.3",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 6.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "German Wismut via Latin and Arabic",
+        "group": "15",
+        "period": 6,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "208.98",
+        "density": "9.78",
+        "melting_point": "544.7",
+        "boiling_point": "1837",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

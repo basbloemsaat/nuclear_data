@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 108,
+    "mass_number": 277,
+    "symbol": "Hs",
+    "element_name": "Hassium",
+    "isomer_state": "s",
+    "isotope_notation": "277Hss"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "141380#",
+        "mass_uncertainty_keV": "450#",
+        "half_life": "12ms9",
+        "spin_parity": null,
+        "discovery_year": 2010.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Neo-Latin Hassia 'Hesse'",
+        "group": "8",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[271]",
+        "density": "27-29",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

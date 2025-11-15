@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 9,
+    "mass_number": 18,
+    "symbol": "Fi",
+    "element_name": "Fluorine",
+    "isomer_state": "i",
+    "isotope_notation": "18Fii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "1914.7",
+        "mass_uncertainty_keV": "0.5",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 96.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": null
+  }
+}

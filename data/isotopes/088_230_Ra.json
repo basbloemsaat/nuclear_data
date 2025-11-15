@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 88,
+    "mass_number": 230,
+    "symbol": "Ra",
+    "element_name": "Radium",
+    "isomer_state": null,
+    "isotope_notation": "230Ra"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "34516",
+        "mass_uncertainty_keV": "10",
+        "half_life": null,
+        "spin_parity": "0+",
+        "discovery_year": 10.0,
+        "decay_modes": "β−=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Latin radius 'ray'",
+        "group": "2",
+        "period": 7,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[226]",
+        "density": "5.5",
+        "melting_point": "973",
+        "boiling_point": "2010",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

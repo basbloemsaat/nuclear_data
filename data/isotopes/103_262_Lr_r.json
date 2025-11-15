@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 103,
+    "mass_number": 262,
+    "symbol": "Lr",
+    "element_name": "Lawrencium",
+    "isomer_state": "r",
+    "isotope_notation": "262Lrr"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "102110#",
+        "mass_uncertainty_keV": "200#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 1.0,
+        "decay_modes": "β+=?;SF<10;α?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Ernest Lawrence",
+        "group": "3",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[266]",
+        "density": "14.4",
+        "melting_point": "1900",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

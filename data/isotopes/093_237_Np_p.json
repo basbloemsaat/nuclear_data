@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 93,
+    "mass_number": 237,
+    "symbol": "Np",
+    "element_name": "Neptunium",
+    "isomer_state": "p",
+    "isotope_notation": "237Npp"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "44871.6",
+        "mass_uncertainty_keV": "1.1",
+        "half_life": "2.144My0.007",
+        "spin_parity": null,
+        "discovery_year": 1948.0,
+        "decay_modes": "α=100;SF<2e-10;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Neptune eighth planet",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[237]",
+        "density": "20.45",
+        "melting_point": "917",
+        "boiling_point": "4273",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 109,
+    "mass_number": 282,
+    "symbol": "Mt",
+    "element_name": "Meitnerium",
+    "isomer_state": "t",
+    "isotope_notation": "282Mtt"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "155460#",
+        "mass_uncertainty_keV": "450#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 2016.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Lise Meitner",
+        "group": "9",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[278]",
+        "density": "27-28",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

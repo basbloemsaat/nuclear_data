@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 18,
+    "mass_number": 53,
+    "symbol": "Ar",
+    "element_name": "Argon",
+    "isomer_state": "r",
+    "isotope_notation": "53Arr"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "6790#",
+        "mass_uncertainty_keV": "700#",
+        "half_life": "20#ms>620ns",
+        "spin_parity": null,
+        "discovery_year": 2009.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek argós 'idle'",
+        "group": "18",
+        "period": 3,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "39.95",
+        "density": "0.001784",
+        "melting_point": "83.80",
+        "boiling_point": "87.30",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

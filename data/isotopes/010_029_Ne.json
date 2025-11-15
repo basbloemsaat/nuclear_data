@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 10,
+    "mass_number": 29,
+    "symbol": "Ne",
+    "element_name": "Neon",
+    "isomer_state": null,
+    "isotope_notation": "29Ne"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "18400",
+        "mass_uncertainty_keV": "150",
+        "half_life": "14.7ms0.4",
+        "spin_parity": null,
+        "discovery_year": 150.0,
+        "decay_modes": "β−=100;β−n=285;β−2n=41"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek néon 'new'",
+        "group": "18",
+        "period": 2,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "20.180",
+        "density": "0.0009002",
+        "melting_point": "24.56",
+        "boiling_point": "27.07",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

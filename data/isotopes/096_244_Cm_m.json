@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 96,
+    "mass_number": 244,
+    "symbol": "Cm",
+    "element_name": "Curium",
+    "isomer_state": "m",
+    "isotope_notation": "244Cmm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "59492.0",
+        "mass_uncertainty_keV": "1.1",
+        "half_life": "34ms2",
+        "spin_parity": "6+",
+        "discovery_year": 17.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Pierre and Marie Curie",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[247]",
+        "density": "13.51",
+        "melting_point": "1613",
+        "boiling_point": "3383",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}
