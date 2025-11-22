@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 12,
+    "mass_number": 22,
+    "symbol": "Mg",
+    "element_name": "Magnesium",
+    "isomer_state": "i",
+    "isotope_notation": "22Mgi"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "13644",
+        "mass_uncertainty_keV": "6",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": "α=?;p=?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Magnesia region Greece",
+        "group": "2",
+        "period": 3,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "24.305",
+        "density": "1.738",
+        "melting_point": "923",
+        "boiling_point": "1363",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

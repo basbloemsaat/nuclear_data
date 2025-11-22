@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 16,
+    "mass_number": 47,
+    "symbol": "S",
+    "element_name": "Sulfur",
+    "isomer_state": null,
+    "isotope_notation": "47S"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "7200#",
+        "mass_uncertainty_keV": "400#",
+        "half_life": "24#ms>200ns",
+        "spin_parity": null,
+        "discovery_year": 1989.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Latin",
+        "group": "16",
+        "period": 3,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "32.06",
+        "density": "2.07",
+        "melting_point": "388.36",
+        "boiling_point": "717.87",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

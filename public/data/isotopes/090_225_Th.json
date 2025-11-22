@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 90,
+    "mass_number": 225,
+    "symbol": "Th",
+    "element_name": "Thorium",
+    "isomer_state": null,
+    "isotope_notation": "225Th"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "22310",
+        "mass_uncertainty_keV": "5",
+        "half_life": null,
+        "spin_parity": "3/2+",
+        "discovery_year": 1949.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Thor Norse god of thunder",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "232.04",
+        "density": "11.7",
+        "melting_point": "2115",
+        "boiling_point": "5061",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

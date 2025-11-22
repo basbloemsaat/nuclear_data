@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 92,
+    "mass_number": 232,
+    "symbol": "U",
+    "element_name": "Uranium",
+    "isomer_state": null,
+    "isotope_notation": "232U"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "34609.4",
+        "mass_uncertainty_keV": "1.8",
+        "half_life": null,
+        "spin_parity": "0+",
+        "discovery_year": 6.0,
+        "decay_modes": "α=100;24Ne=8.9e-107;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Uranus seventh planet",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "238.03",
+        "density": "19.1",
+        "melting_point": "1405.3",
+        "boiling_point": "4404",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

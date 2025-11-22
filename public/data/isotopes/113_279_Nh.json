@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 113,
+    "mass_number": 279,
+    "symbol": "Nh",
+    "element_name": "Nihonium",
+    "isomer_state": null,
+    "isotope_notation": "279Nh"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "159460#",
+        "mass_uncertainty_keV": "600#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Japanese Nihon 'Japan'",
+        "group": "13",
+        "period": 7,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[286]",
+        "density": "16",
+        "melting_point": "700",
+        "boiling_point": "1400",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 14,
+    "mass_number": 39,
+    "symbol": "Si",
+    "element_name": "Silicon",
+    "isomer_state": "i",
+    "isotope_notation": "39Sii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "2320",
+        "mass_uncertainty_keV": "140",
+        "half_life": "41.2ms4.1",
+        "spin_parity": null,
+        "discovery_year": 2320.0,
+        "decay_modes": "β−=100;β−n=333;β−2n?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Latin silex 'flint'",
+        "group": "14",
+        "period": 3,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "28.085",
+        "density": "2.3290",
+        "melting_point": "1687",
+        "boiling_point": "3538",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

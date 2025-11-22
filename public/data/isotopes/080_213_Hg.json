@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 80,
+    "mass_number": 213,
+    "symbol": "Hg",
+    "element_name": "Mercury",
+    "isomer_state": null,
+    "isotope_notation": "213Hg"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "8200#",
+        "mass_uncertainty_keV": "300#",
+        "half_life": ">300ns",
+        "spin_parity": null,
+        "discovery_year": 2010.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Mercury Roman god of commerce",
+        "group": "12",
+        "period": 6,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "200.59",
+        "density": "13.534",
+        "melting_point": "234.43",
+        "boiling_point": "629.88",
+        "phase": "liquid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

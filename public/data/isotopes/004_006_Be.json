@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 4,
+    "mass_number": 6,
+    "symbol": "Be",
+    "element_name": "Beryllium",
+    "isomer_state": null,
+    "isotope_notation": "6Be"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "18375",
+        "mass_uncertainty_keV": "5",
+        "half_life": null,
+        "spin_parity": "0+",
+        "discovery_year": 2.0,
+        "decay_modes": "2p=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Beryl mineral",
+        "group": "2",
+        "period": 2,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "9.0122",
+        "density": "1.85",
+        "melting_point": "1560",
+        "boiling_point": "2742",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

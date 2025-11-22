@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 91,
+    "mass_number": 213,
+    "symbol": "Pa",
+    "element_name": "Protactinium",
+    "isomer_state": null,
+    "isotope_notation": "213Pa"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "19650",
+        "mass_uncertainty_keV": "60",
+        "half_life": "7.4ms2.4",
+        "spin_parity": null,
+        "discovery_year": 60.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Proto- 'first before' + actinium",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "231.04",
+        "density": "15.37",
+        "melting_point": "1841",
+        "boiling_point": "4300",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

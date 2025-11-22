@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 101,
+    "mass_number": 251,
+    "symbol": "Md",
+    "element_name": "Mendelevium",
+    "isomer_state": null,
+    "isotope_notation": "251Md"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "78967",
+        "mass_uncertainty_keV": "19",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 19.0,
+        "decay_modes": "β+?;α=101"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Dmitri Mendeleev",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[258]",
+        "density": "10.3",
+        "melting_point": "1100",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 87,
+    "mass_number": 198,
+    "symbol": "Fr",
+    "element_name": "Francium",
+    "isomer_state": "m",
+    "isotope_notation": "198Frm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "9580",
+        "mass_uncertainty_keV": "40",
+        "half_life": "1.1ms0.7",
+        "spin_parity": null,
+        "discovery_year": 9580.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "France",
+        "group": "1",
+        "period": 7,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[223]",
+        "density": "2.48",
+        "melting_point": "281",
+        "boiling_point": "890",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

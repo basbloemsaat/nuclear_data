@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 24,
+    "mass_number": 42,
+    "symbol": "Cr",
+    "element_name": "Chromium",
+    "isomer_state": "r",
+    "isotope_notation": "42Crr"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "7060#",
+        "mass_uncertainty_keV": "300#",
+        "half_life": "13.3ms1.0",
+        "spin_parity": "0+",
+        "discovery_year": 16.0,
+        "decay_modes": "β+≈100;β+p=94.450;2p?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek chróma 'colour'",
+        "group": "6",
+        "period": 4,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "51.996",
+        "density": "7.15",
+        "melting_point": "2180",
+        "boiling_point": "2944",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

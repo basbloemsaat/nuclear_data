@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 8,
+    "mass_number": 16,
+    "symbol": "Op",
+    "element_name": "Oxygen",
+    "isomer_state": "p",
+    "isotope_notation": "16Opp"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "8231.60",
+        "mass_uncertainty_keV": "0.27",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": "p=784;α=224;IT=0.283"
+      }
+    },
+    "wikipedia": null
+  }
+}

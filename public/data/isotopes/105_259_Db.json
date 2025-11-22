@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 105,
+    "mass_number": 259,
+    "symbol": "Db",
+    "element_name": "Dubnium",
+    "isomer_state": null,
+    "isotope_notation": "259Db"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "101990",
+        "mass_uncertainty_keV": "60",
+        "half_life": "510ms160",
+        "spin_parity": null,
+        "discovery_year": 60.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Dubna Russia",
+        "group": "5",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[268]",
+        "density": "21.6",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

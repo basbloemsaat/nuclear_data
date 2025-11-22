@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 111,
+    "mass_number": 280,
+    "symbol": "Rg",
+    "element_name": "Roentgenium",
+    "isomer_state": null,
+    "isotope_notation": "280Rg"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "153890#",
+        "mass_uncertainty_keV": "530#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 2004.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Wilhelm Röntgen",
+        "group": "11",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[282]",
+        "density": "22-24",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

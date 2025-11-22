@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 11,
+    "mass_number": 35,
+    "symbol": "Na",
+    "element_name": "Sodium",
+    "isomer_state": null,
+    "isotope_notation": "35Na"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "37830#",
+        "mass_uncertainty_keV": "670#",
+        "half_life": "1.5ms0.5",
+        "spin_parity": null,
+        "discovery_year": 11.0,
+        "decay_modes": "β−=100;β−n?;β−2n?"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "From English soda",
+        "group": "1",
+        "period": 3,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "22.990",
+        "density": "0.968",
+        "melting_point": "370.87",
+        "boiling_point": "1156",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

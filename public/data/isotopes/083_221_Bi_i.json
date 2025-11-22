@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 83,
+    "mass_number": 221,
+    "symbol": "Bi",
+    "element_name": "Bismuth",
+    "isomer_state": "i",
+    "isotope_notation": "221Bii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "24200#",
+        "mass_uncertainty_keV": "300#",
+        "half_life": ">300ns",
+        "spin_parity": null,
+        "discovery_year": 2009.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "German Wismut via Latin and Arabic",
+        "group": "15",
+        "period": 6,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "208.98",
+        "density": "9.78",
+        "melting_point": "544.7",
+        "boiling_point": "1837",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 117,
+    "mass_number": 293,
+    "symbol": "Ts",
+    "element_name": "Tennessine",
+    "isomer_state": "s",
+    "isotope_notation": "293Tss"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "194430#",
+        "mass_uncertainty_keV": "780#",
+        "half_life": "25ms6",
+        "spin_parity": null,
+        "discovery_year": 2010.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Tennessee US",
+        "group": "17",
+        "period": 7,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[294]",
+        "density": "7.1-7.3",
+        "melting_point": "700",
+        "boiling_point": "883",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

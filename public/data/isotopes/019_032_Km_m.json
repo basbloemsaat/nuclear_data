@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 19,
+    "mass_number": 32,
+    "symbol": "Km",
+    "element_name": "Potassium",
+    "isomer_state": "m",
+    "isotope_notation": "32Kmm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "22940#",
+        "mass_uncertainty_keV": "410#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": null
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 27,
+    "mass_number": 47,
+    "symbol": "Co",
+    "element_name": "Cobalt",
+    "isomer_state": "o",
+    "isotope_notation": "47Coo"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "10620#",
+        "mass_uncertainty_keV": "600#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "German Kobold 'goblin'",
+        "group": "9",
+        "period": 4,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "58.933",
+        "density": "8.90",
+        "melting_point": "1768",
+        "boiling_point": "3200",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

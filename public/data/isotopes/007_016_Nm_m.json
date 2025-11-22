@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 7,
+    "mass_number": 16,
+    "symbol": "Nm",
+    "element_name": "Nitrogen",
+    "isomer_state": "m",
+    "isotope_notation": "16Nmm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "5804.3",
+        "mass_uncertainty_keV": "2.3",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 1957.0,
+        "decay_modes": "IT≈100;β−=0.00038925"
+      }
+    },
+    "wikipedia": null
+  }
+}

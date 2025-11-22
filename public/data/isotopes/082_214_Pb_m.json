@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 82,
+    "mass_number": 214,
+    "symbol": "Pb",
+    "element_name": "Lead",
+    "isomer_state": "m",
+    "isotope_notation": "214Pbm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "1237",
+        "mass_uncertainty_keV": "20",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 1237.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Proto-Celtic ɸloudom 'flow'",
+        "group": "14",
+        "period": 6,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "207.2",
+        "density": "11.34",
+        "melting_point": "600.61",
+        "boiling_point": "2022",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

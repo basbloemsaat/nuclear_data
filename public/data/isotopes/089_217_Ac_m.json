@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 89,
+    "mass_number": 217,
+    "symbol": "Ac",
+    "element_name": "Actinium",
+    "isomer_state": "m",
+    "isotope_notation": "217Acm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "10715",
+        "mass_uncertainty_keV": "18",
+        "half_life": null,
+        "spin_parity": "29/2+",
+        "discovery_year": 18.0,
+        "decay_modes": "IT=95.491810;α=4.5118"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek aktís 'ray'",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[227]",
+        "density": "10",
+        "melting_point": "1323",
+        "boiling_point": "3471",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

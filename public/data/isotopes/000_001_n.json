@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 0,
+    "mass_number": 1,
+    "symbol": "n",
+    "element_name": "neutron",
+    "isomer_state": null,
+    "isotope_notation": "1n"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "8071.3181",
+        "mass_uncertainty_keV": "0.0004",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 1932.0,
+        "decay_modes": "β−=100"
+      }
+    },
+    "wikipedia": null
+  }
+}

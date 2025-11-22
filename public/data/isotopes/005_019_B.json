@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 5,
+    "mass_number": 19,
+    "symbol": "B",
+    "element_name": "Boron",
+    "isomer_state": null,
+    "isotope_notation": "19B"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "59770",
+        "mass_uncertainty_keV": "530",
+        "half_life": "2.92ms0.13",
+        "spin_parity": null,
+        "discovery_year": 530.0,
+        "decay_modes": "β−=100;β−n=719;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Borax mineral",
+        "group": "13",
+        "period": 2,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "10.81",
+        "density": "2.34",
+        "melting_point": "2349",
+        "boiling_point": "4200",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 13,
+    "mass_number": 42,
+    "symbol": "Al",
+    "element_name": "Aluminium",
+    "isomer_state": null,
+    "isotope_notation": "42Al"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "41990#",
+        "mass_uncertainty_keV": "500#",
+        "half_life": "3#ms>170ns",
+        "spin_parity": null,
+        "discovery_year": 16.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Alumina from Latin alumen",
+        "group": "13",
+        "period": 3,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "26.982",
+        "density": "2.70",
+        "melting_point": "933.47",
+        "boiling_point": "2792",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

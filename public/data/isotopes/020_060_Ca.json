@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 20,
+    "mass_number": 60,
+    "symbol": "Ca",
+    "element_name": "Calcium",
+    "isomer_state": null,
+    "isotope_notation": "60Ca"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "11000#",
+        "mass_uncertainty_keV": "700#",
+        "half_life": "2#ms>400ns",
+        "spin_parity": "0+",
+        "discovery_year": 2018.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Latin calx 'lime'",
+        "group": "2",
+        "period": 4,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "40.078",
+        "density": "1.55",
+        "melting_point": "1115",
+        "boiling_point": "1757",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

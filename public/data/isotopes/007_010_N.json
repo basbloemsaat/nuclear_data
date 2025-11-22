@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 7,
+    "mass_number": 10,
+    "symbol": "N",
+    "element_name": "Nitrogen",
+    "isomer_state": null,
+    "isotope_notation": "10N"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "38800",
+        "mass_uncertainty_keV": "400",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 400.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Greek nítron + -gen 'niter-forming'",
+        "group": "15",
+        "period": 2,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "14.007",
+        "density": "0.0012506",
+        "melting_point": "63.15",
+        "boiling_point": "77.36",
+        "phase": "gas"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

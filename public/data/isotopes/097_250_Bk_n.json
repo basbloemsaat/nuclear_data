@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 97,
+    "mass_number": 250,
+    "symbol": "Bk",
+    "element_name": "Berkelium",
+    "isomer_state": "n",
+    "isotope_notation": "250Bkn"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "73038",
+        "mass_uncertainty_keV": "3",
+        "half_life": null,
+        "spin_parity": "7+",
+        "discovery_year": 213.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Berkeley California",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[247]",
+        "density": "14.78",
+        "melting_point": "1259",
+        "boiling_point": "2900",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

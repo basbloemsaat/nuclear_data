@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 26,
+    "mass_number": 45,
+    "symbol": "Fe",
+    "element_name": "Iron",
+    "isomer_state": null,
+    "isotope_notation": "45Fe"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "14410#",
+        "mass_uncertainty_keV": "280#",
+        "half_life": "2.5ms0.2",
+        "spin_parity": null,
+        "discovery_year": 1996.0,
+        "decay_modes": "2p=704;β+=304;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Proto-Celtic īsarnom 'iron'",
+        "group": "8",
+        "period": 4,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "55.845",
+        "density": "7.874",
+        "melting_point": "1811",
+        "boiling_point": "3134",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

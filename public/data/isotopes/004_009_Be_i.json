@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 4,
+    "mass_number": 9,
+    "symbol": "Be",
+    "element_name": "Beryllium",
+    "isomer_state": "i",
+    "isotope_notation": "9Bei"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "25738.8",
+        "mass_uncertainty_keV": "1.7",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 6.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Beryl mineral",
+        "group": "2",
+        "period": 2,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "9.0122",
+        "density": "1.85",
+        "melting_point": "1560",
+        "boiling_point": "2742",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

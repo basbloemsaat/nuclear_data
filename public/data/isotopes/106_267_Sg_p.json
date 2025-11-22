@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 106,
+    "mass_number": 267,
+    "symbol": "Sg",
+    "element_name": "Seaborgium",
+    "isomer_state": "p",
+    "isotope_notation": "267Sgp"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "115830#",
+        "mass_uncertainty_keV": "270#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Glenn Seaborg",
+        "group": "6",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[267]",
+        "density": "23-24",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

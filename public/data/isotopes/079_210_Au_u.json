@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 79,
+    "mass_number": 210,
+    "symbol": "Au",
+    "element_name": "Gold",
+    "isomer_state": "u",
+    "isotope_notation": "210Auu"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "2680#",
+        "mass_uncertainty_keV": "400#",
+        "half_life": ">300ns",
+        "spin_parity": null,
+        "discovery_year": 2010.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Proto-Indo-European root as 'yellow'",
+        "group": "11",
+        "period": 6,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "196.97",
+        "density": "19.3",
+        "melting_point": "1337.33",
+        "boiling_point": "3129",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

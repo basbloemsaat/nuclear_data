@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 92,
+    "mass_number": 235,
+    "symbol": "Un",
+    "element_name": "Uranium",
+    "isomer_state": "n",
+    "isotope_notation": "235Unn"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "43420",
+        "mass_uncertainty_keV": "300",
+        "half_life": "3.6ms1.8",
+        "spin_parity": null,
+        "discovery_year": 300.0,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": null
+  }
+}

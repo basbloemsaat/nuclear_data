@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 95,
+    "mass_number": 244,
+    "symbol": "Am",
+    "element_name": "Americium",
+    "isomer_state": "m",
+    "isotope_notation": "244Amm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "59968.4",
+        "mass_uncertainty_keV": "1.4",
+        "half_life": null,
+        "spin_parity": "1+",
+        "discovery_year": 1950.0,
+        "decay_modes": "β−=99.963613;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Americas",
+        "group": "f-block",
+        "period": 7,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[243]",
+        "density": "12",
+        "melting_point": "1449",
+        "boiling_point": "2880",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

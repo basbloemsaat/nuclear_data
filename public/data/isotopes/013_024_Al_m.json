@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 13,
+    "mass_number": 24,
+    "symbol": "Al",
+    "element_name": "Aluminium",
+    "isomer_state": "m",
+    "isotope_notation": "24Alm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "376.99",
+        "mass_uncertainty_keV": "0.25",
+        "half_life": "130ms3",
+        "spin_parity": "1+",
+        "discovery_year": 7.0,
+        "decay_modes": "IT=82.530;β+=17.530;"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Alumina from Latin alumen",
+        "group": "13",
+        "period": 3,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "26.982",
+        "density": "2.70",
+        "melting_point": "933.47",
+        "boiling_point": "2792",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

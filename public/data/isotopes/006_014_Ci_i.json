@@ -1,0 +1,23 @@
+{
+  "identification": {
+    "atomic_number": 6,
+    "mass_number": 14,
+    "symbol": "Ci",
+    "element_name": "Carbon",
+    "isomer_state": "i",
+    "isotope_notation": "14Cii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "25120",
+        "mass_uncertainty_keV": "100",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 100.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": null
+  }
+}

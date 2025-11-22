@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 22,
+    "mass_number": 65,
+    "symbol": "Ti",
+    "element_name": "Titanium",
+    "isomer_state": "i",
+    "isotope_notation": "65Tii"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "5210#",
+        "mass_uncertainty_keV": "700#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": null,
+        "decay_modes": null
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Titans children of Gaia and Ouranos",
+        "group": "4",
+        "period": 4,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "47.867",
+        "density": "4.506",
+        "melting_point": "1941",
+        "boiling_point": "3560",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "primordial"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 87,
+    "mass_number": 212,
+    "symbol": "Fr",
+    "element_name": "Francium",
+    "isomer_state": "q",
+    "isotope_notation": "212Frq"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "5017",
+        "mass_uncertainty_keV": "9",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 5017.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "France",
+        "group": "1",
+        "period": 7,
+        "block": "s-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[223]",
+        "density": "2.48",
+        "melting_point": "281",
+        "boiling_point": "890",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}

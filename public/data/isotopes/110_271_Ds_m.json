@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 110,
+    "mass_number": 271,
+    "symbol": "Ds",
+    "element_name": "Darmstadtium",
+    "isomer_state": "m",
+    "isotope_notation": "271Dsm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "136020#",
+        "mass_uncertainty_keV": "100#",
+        "half_life": "1.7ms0.4",
+        "spin_parity": null,
+        "discovery_year": 68.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Darmstadt Germany",
+        "group": "10",
+        "period": 7,
+        "block": "d-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[281]",
+        "density": "26-27",
+        "melting_point": "-",
+        "boiling_point": "-",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

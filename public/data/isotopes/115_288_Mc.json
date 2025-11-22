@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 115,
+    "mass_number": 288,
+    "symbol": "Mc",
+    "element_name": "Moscovium",
+    "isomer_state": null,
+    "isotope_notation": "288Mc"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "179670#",
+        "mass_uncertainty_keV": "540#",
+        "half_life": "177ms20",
+        "spin_parity": null,
+        "discovery_year": 2004.0,
+        "decay_modes": "α=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Moscow Russia",
+        "group": "15",
+        "period": 7,
+        "block": "p-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[290]",
+        "density": "13.5",
+        "melting_point": "700",
+        "boiling_point": "1400",
+        "phase": "unknown"
+      },
+      "classification": {
+        "origin": "synthetic"
+      }
+    }
+  }
+}

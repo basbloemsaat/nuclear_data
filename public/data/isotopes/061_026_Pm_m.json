@@ -1,0 +1,40 @@
+{
+  "identification": {
+    "atomic_number": 61,
+    "mass_number": 26,
+    "symbol": "Pm",
+    "element_name": "Promethium",
+    "isomer_state": "m",
+    "isotope_notation": "26Pmm"
+  },
+  "sources": {
+    "nubase2020": {
+      "nuclear_properties": {
+        "mass_excess_keV": "11130#",
+        "mass_uncertainty_keV": "200#",
+        "half_life": null,
+        "spin_parity": null,
+        "discovery_year": 115.0,
+        "decay_modes": "IT=100"
+      }
+    },
+    "wikipedia": {
+      "chemical_properties": {
+        "name_origin": "Prometheus Titan",
+        "group": "f-block",
+        "period": 6,
+        "block": "f-block"
+      },
+      "physical_properties": {
+        "atomic_weight": "[145]",
+        "density": "7.26",
+        "melting_point": "1315",
+        "boiling_point": "3273",
+        "phase": "solid"
+      },
+      "classification": {
+        "origin": "from decay"
+      }
+    }
+  }
+}
