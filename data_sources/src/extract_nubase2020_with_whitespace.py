@@ -108,15 +108,10 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
                 current_element = "".join(filter(str.isalpha, current_nuclide))
                 prev_element = "".join(filter(str.isalpha, prev_nuclide))
 
-                print(
-                    f"  Current element: {current_element, prev_element} , comparison: {prev_element[:-1]} "
-                )
-
                 if current_element.startswith(
                     prev_element[:-1]
                 ) and current_nuclide.startswith(prev_nuclide[:-1]):
                     suffix = current_nuclide[-1]
-                    print(f"  Found suffix: {suffix}")
                     if suffix:
                         superscript_suffix = convert_to_superscript(suffix)
                         new_nuclide = current_nuclide[:-1] + superscript_suffix
