@@ -7,7 +7,7 @@ PDF_PATH = Path(__file__).parent.parent / "NUBASE2020.pdf"
 TXT_PATH = Path(__file__).parent.parent / "tmp" / "nubase2020_table_ws.txt"
 
 TABLE1_START_PAGE = 21  # 1-based page number
-TABLE1_END_PAGE = 181  # inclusive
+TABLE1_END_PAGE = 22  # inclusive
 
 SUPERSCRIPT_MAP = {
     "i": "ⁱ",
@@ -52,7 +52,7 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
             line for line in extracted_lines if not line.strip().startswith("∗")
         ]
 
-        print(f"Extracted {len(filtered_lines)} lines after filtering.")
+        # print(f"Extracted {len(filtered_lines)} lines after filtering.")
 
         header_lines_to_remove = {
             "Chinese Physics C Vol. 45, No. 3 (2021) 030001",
@@ -121,6 +121,30 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
     return suffixed_lines
 
 
+def extract_data_from_lines(table_pages: list[str]):
+    isotope_data = []
+    isotope_data_lookup = {}
+
+    for line in table_pages:
+        print(line)
+
+        isotope = {
+            "name": line.split()[0],
+            # "data": line,
+        }
+
+        mass_excess_str = line.split()[1]
+
+        try:
+            mass_excess = float(mass_excess_str)
+            isotope["mass_excess"] = mass_excess
+        except ValueError:
+            isotope["mass_excess"] = None
+            break
+
+        print(f"Isotope: {isotope}")
+
+
 if __name__ == "__main__":
     table_pages = extract_table_from_pdf(PDF_PATH, TABLE1_START_PAGE, TABLE1_END_PAGE)
     TXT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -128,3 +152,5 @@ if __name__ == "__main__":
         f.write("\n".join(table_pages))
 
     print(f"Successfully extracted table to {TXT_PATH}")
+
+    extract_data_from_lines(table_pages)
