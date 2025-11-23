@@ -14,3 +14,9 @@ Start by extracting the first page (page 21) and verify the output before procee
 Do not parse any structure, just text lines.
 
 <!-- Ignore lines that start with an asterisk (\*) as they are footnotes. -->
+
+---
+
+From data_sources/tmp/nubase2020_table1.txt, clean and parse the data into a structured csv file. Put the resulting .csv in data_sources/tmp. Create a new script data_sources/src/nubase2020_table1_to_csv.py to do this.
+
+The headers are: Nuclide, "Mass Excess (keV)","Excitation Energy (keV)","Half-life", Jπ, "Ens Reference", "Year of discovery", "Decay modes and intensities (%)"
