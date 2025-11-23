@@ -44,7 +44,7 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
             # The `layout=True` and `keep_blank_chars` arguments to `extract_text`
             # were not sufficient.
             # A more robust method is to extract words and reconstruct the lines.
-            text = page.extract_text(x_tolerance=1, y_tolerance=1)
+            text = page.extract_text(x_tolerance=1, y_tolerance=3)
             if text:
                 all_lines.extend(text.splitlines())
     return all_lines
@@ -55,7 +55,23 @@ if __name__ == "__main__":
     extracted_lines = extract_table_from_pdf(
         PDF_PATH, TABLE1_START_PAGE, TABLE1_END_PAGE
     )
+    # Filter out lines starting with '∗'
+    filtered_lines = [
+        line for line in extracted_lines if not line.strip().startswith("∗")
+    ]
+
+    header_lines_to_remove = {
+        "Chinese Physics C Vol. 45, No. 3 (2021) 030001",
+        "Table I. The NUBASE2020 table (Explanation of Table on page 030001-16)",
+        "Nuclide Mass excess Excitation Energy Half-life Jπ Ens Reference Year of Decay modes and intensities",
+        "(keV) (keV) discovery (%)",
+    }
+    
+    final_lines = [
+        line for line in filtered_lines if line.strip() not in header_lines_to_remove
+    ]
+
     with open(TXT_PATH, "w", encoding="utf-8") as f:
-        for line in extracted_lines:
+        for line in final_lines:
             f.write(line + "\n")
-    print(f"Successfully extracted {len(extracted_lines)} lines to {TXT_PATH}")
+    print(f"Successfully extracted and filtered {len(final_lines)} lines to {TXT_PATH}")
