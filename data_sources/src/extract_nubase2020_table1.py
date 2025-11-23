@@ -66,9 +66,12 @@ if __name__ == "__main__":
         "Nuclide Mass excess Excitation Energy Half-life Jπ Ens Reference Year of Decay modes and intensities",
         "(keV) (keV) discovery (%)",
     }
-    
+
     final_lines = [
-        line for line in filtered_lines if line.strip() not in header_lines_to_remove
+        line
+        for line in filtered_lines
+        if line.strip() not in header_lines_to_remove
+        and not line.strip().startswith("030001-")
     ]
 
     with open(TXT_PATH, "w", encoding="utf-8") as f:
