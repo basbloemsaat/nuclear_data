@@ -79,9 +79,36 @@ if __name__ == "__main__":
     # For now, we only fix the β− case.
     processed_lines = [line.replace("β−", "β⁻") for line in final_lines]
 
+    # Merge lines that were split
+    merged_lines = []
+    for line in processed_lines:
+        # The first column is the nuclide, which always starts with a number.
+        # If a line does not start with a number (or is empty), it is a continuation of the previous line.
+        if line.strip() and not line.strip()[0].isdigit():
+            if merged_lines:
+                last_line = merged_lines[-1]
+                last_semicolon_index = last_line.rfind(";") + 1
+                if last_semicolon_index != -1:
+                    # print(f"Merging line:\n  {last_line}\n  {line}")
+
+                    new_line = (
+                        last_line[:last_semicolon_index]
+                        + f"{line.strip()}"
+                        + last_line[last_semicolon_index:]
+                    )
+
+                    # print(f"\n  {new_line}")
+
+                    merged_lines[-1] = new_line
+                else:
+                    merged_lines[-1] += f" {line.strip()}"
+
+        else:
+            merged_lines.append(line)
+
     with open(TXT_PATH, "w", encoding="utf-8") as f:
-        for line in processed_lines:
+        for line in merged_lines:
             f.write(line + "\n")
     print(
-        f"Successfully extracted and filtered {len(processed_lines)} lines to {TXT_PATH}"
+        f"Successfully extracted and filtered {len(merged_lines)} lines to {TXT_PATH}"
     )
