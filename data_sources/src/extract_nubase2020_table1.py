@@ -74,7 +74,14 @@ if __name__ == "__main__":
         and not line.strip().startswith("030001-")
     ]
 
+    # Post-process lines to fix superscripts
+    # pdfplumber does not always correctly extract superscripts.
+    # For now, we only fix the β− case.
+    processed_lines = [line.replace("β−", "β⁻") for line in final_lines]
+
     with open(TXT_PATH, "w", encoding="utf-8") as f:
-        for line in final_lines:
+        for line in processed_lines:
             f.write(line + "\n")
-    print(f"Successfully extracted and filtered {len(final_lines)} lines to {TXT_PATH}")
+    print(
+        f"Successfully extracted and filtered {len(processed_lines)} lines to {TXT_PATH}"
+    )
