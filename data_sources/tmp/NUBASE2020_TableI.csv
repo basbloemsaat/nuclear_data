@@ -1,0 +1,162 @@
+Nuclide,Mass excess (keV),Excitation Energy (keV),Half-life,Jπ,Ens Reference,Year of discovery,Decay modes and intensities (%)
+"(keV)
+(keV)",discovery (%)
+"1n 8071.3181
+0.0004
+609.8 s 0.6 1/2+∗ 06 19Ma40 T 1932 β −=100 ∗"
+"1H 7288.9710
+0.0001
+STABLE",1/2+∗ 06 11Be53 D 1920 IS=99.9855 78 ∗
+∗1n T : from the world average in 19Ma40=609.8(0.6) (τ=879.7(0.8) s),∗∗
+∗1H M : rounded from 7288.971064(0.000013) keV,∗∗
+"2H 13135.7229
+0.0001
+STABLE",1+∗ 03,1932 IS=0.0145 78 ∗
+∗2H M : rounded from 13135.722895(0.000015) keV,∗∗
+"3H 14949.8109
+0.0001
+12.32 y 0.02",1/2+∗ 00,1934 β −=100 ∗
+"3He 14931.2188
+0.0001
+STABLE",1/2+∗ 98,1934 IS=0.0002 2 ∗
+"3Li 28670#
+2000#
+p-unstable",3/2−# 98,p ? ∗
+∗3H M : rounded from 14949.81090(0.00008) keV,∗∗
+∗3He M : rounded from 14931.21888(0.00006) keV,∗∗
+∗3Li I : identification in 69Wi13 not accepted,∗∗
+"4H 24620
+100
+139 ys 10",2− 98 03Me11 T 1981 n=100 ∗
+"4He 2424.9158
+0.0001
+STABLE",0+ 98,1908 IS=99.9998 2 ∗
+"4Li 25320
+210
+91 ys 9",2− 98 65Ce02 T 1965 p=100
+"∗4H T : width=3.28(0.23) MeV; other 91Go19=4.7(1.0) outweighed, not used",∗∗
+∗4He M : rounded from 2424.91587(0.00015) keV,∗∗
+"5H 32890
+90
+86 ys 6",(1/2+) 19 17Wu03 T,1987 2n=100 ∗
+"5He 11231
+20
+602 ys 22",3/2− 02,1937 n=100 ∗
+"5Li 11680
+50
+370 ys 30",3/2− 02,1941 p=100
+"5Be 37140#
+2000#
+p-unstable",1/2+# 18,p ?
+∗5H T : from width=5.3(0.4) MeV in 17Wu03,∗∗
+∗5H J : from angular distribution data consistent with l = 0 in 01Ko52,∗∗
+"∗5He T : from width=758(28) keV, average 12Lu01=767(10) keV",∗∗
+"∗5He T :
+09Ak03=670 (12, stat) (30, syst) keV; Birge ratio=2.9",∗∗
+"6H 41880
+250
+294 ys 67",2−# 19,1984 n ?;3n ? ∗
+"6He 17592.10
+0.05 806.92 ms 0.24",0+ 02 15Pf01 D 1936 β −=100;β −d=0.000278 18 ∗
+"6Li 14086.8804
+0.0014
+STABLE",1+∗ 02,1921 IS=4.85 171
+"Nuclide Mass excess
+Excitation Energy
+Half-life Jπ Ens Reference",Year of Decay modes and intensities
+"(keV)
+(keV)",discovery (%)
+"1n 8071.3181
+0.0004
+609.8
+s
+0.6 1/2+∗ 06 19Ma40 T 1932 β −=100 ∗"
+"1H 7288.9710
+0.0001
+STABLE 1/2+∗ 06 11Be53 D 1920 IS=99.9855 78 ∗"
+∗1n T : from the world average in 19Ma40=609.8(0.6) (τ=879.7(0.8) s),∗∗
+∗1H M : rounded from 7288.971064(0.000013) keV,∗∗
+"2H 13135.7229
+0.0001
+STABLE 1+∗ 03",1932 IS=0.0145 78 ∗
+∗2H M : rounded from 13135.722895(0.000015) keV,∗∗
+"3H 14949.8109
+0.0001
+12.32
+y 0.02 1/2+∗ 00",1934 β −=100 ∗
+"3He 14931.2188
+0.0001
+STABLE 1/2+∗ 98",1934 IS=0.0002 2 ∗
+"3Li 28670#
+2000#
+p-unstable 3/2−# 98",p ? ∗
+∗3H M : rounded from 14949.81090(0.00008) keV,∗∗
+∗3He M : rounded from 14931.21888(0.00006) keV,∗∗
+∗3Li I : identification in 69Wi13 not accepted,∗∗
+"4H 24620
+100
+139
+ys 10 2− 98 03Me11 T 1981 n=100 ∗"
+"4He 2424.9158
+0.0001
+STABLE 0+ 98",1908 IS=99.9998 2 ∗
+"4Li 25320
+210
+91
+ys 9 2− 98 65Ce02 T 1965 p=100"
+"∗4H T : width=3.28(0.23) MeV; other 91Go19=4.7(1.0) outweighed, not used",∗∗
+∗4He M : rounded from 2424.91587(0.00015) keV,∗∗
+"5H 32890
+90
+86
+ys 6 (1/2+) 19 17Wu03 T",1987 2n=100 ∗
+"5He 11231
+20
+602
+ys 22 3/2− 02",1937 n=100 ∗
+"5Li 11680
+50
+370
+ys 30 3/2− 02",1941 p=100
+"5Be 37140#
+2000#
+p-unstable 1/2+# 18",p ?
+∗5H T : from width=5.3(0.4) MeV in 17Wu03,∗∗
+∗5H J : from angular distribution data consistent with l = 0 in 01Ko52,∗∗
+"∗5He T : from width=758(28) keV, average 12Lu01=767(10) keV",∗∗
+"∗5He T :
+09Ak03=670 (12, stat) (30, syst) keV; Birge ratio=2.9",∗∗
+"6H 41880
+250
+294
+ys 67 2−# 19",1984 n ?;3n ? ∗
+"6He 17592.10
+0.05
+806.92 ms 0.24 0+ 02 15Pf01 D 1936 β −=100;β −d=0.000278 18 ∗"
+"6Li 14086.8804
+0.0014
+STABLE 1+∗ 02",1921 IS=4.85 171
+"6Lii 17649.76
+0.10
+3562.88
+0.10
+56
+as 14 0+ T=1 02 81Ro02 E 1981 IT=100"
+"6Be 18375
+5
+5.0
+zs 0.3 0+ 02",1958 2p=100
+"6B 47320#
+2000#
+p-unstable 2−#",2p ?
+"∗6H T : from width=1.55(0.35) MeV, average 84Al08=1.8(5) MeV 86Be35=1.3(5) MeV",∗∗
+"∗6He D : other %β −d 09Ra33=1.65(0.10)e-6, but with 525-keV threshold",∗∗
+"∗6He T : symmetrized from 12Kn01=806.89(0.11, stat)(+0.23-0.19, syst)",∗∗
+"7H 49140#
+1000#
+652
+ys 558 1/2+# 17 08Ca22 T 2003 2n ? ∗"
+"7He 26073
+8
+2.51
+zs 0.07 (3/2)− 03 12Ca05 T 1967 n=100 ∗"
