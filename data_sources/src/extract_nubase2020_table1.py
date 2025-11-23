@@ -1,5 +1,6 @@
-import pdfplumber
 from pathlib import Path
+
+import pdfplumber
 
 
 PDF_PATH = Path(__file__).parent.parent / "NUBASE2020.pdf"
@@ -8,7 +9,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 CSV_PATH = OUTPUT_DIR / "NUBASE2020_TableI.csv"
 
 TABLE1_START_PAGE = 21  # 1-based page number
-TABLE1_END_PAGE = 181  # inclusive
+TABLE1_END_PAGE = 22  # 181  # inclusive
 # Canonical header for Table I (two-line header combined)
 TABLE1_HEADER = [
     "Nuclide",
@@ -20,6 +21,24 @@ TABLE1_HEADER = [
     "Year of discovery",
     "Decay modes and intensities (%)",
 ]
+
+SUPERSCRIPT_MAP = {
+    "i": "ⁱ",
+    "j": "ʲ",
+    "m": "ᵐ",
+    "n": "ⁿ",
+    "p": "ᵖ",
+    "q": "۹",
+    "r": "ʳ",
+    "s": "ˢ",
+}
+
+
+def convert_to_superscript(s: str) -> str:
+    """
+    Converts a string to its superscript equivalent.
+    """
+    return "".join(SUPERSCRIPT_MAP.get(char, char) for char in s)
 
 
 def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> list[str]:
@@ -86,29 +105,39 @@ if __name__ == "__main__":
         # If a line does not start with a number (or is empty), it is a continuation of the previous line.
         if line.strip() and not line.strip()[0].isdigit():
             if merged_lines:
-                last_line = merged_lines[-1]
-                last_semicolon_index = last_line.rfind(";") + 1
-                if last_semicolon_index != -1:
-                    # print(f"Merging line:\n  {last_line}\n  {line}")
-
-                    new_line = (
-                        last_line[:last_semicolon_index]
-                        + f"{line.strip()}"
-                        + last_line[last_semicolon_index:]
-                    )
-
-                    # print(f"\n  {new_line}")
-
-                    merged_lines[-1] = new_line
-                else:
-                    merged_lines[-1] += f" {line.strip()}"
-
+                merged_lines[-1] += f" {line.strip()}"
         else:
             merged_lines.append(line)
 
+    # Convert nuclide suffixes to superscripts
+    suffixed_lines = []
+    for i, line in enumerate(merged_lines):
+        if i > 0:
+            prev_line = suffixed_lines[i - 1]
+            current_nuclide = line.split()[0]
+            prev_nuclide = prev_line.split()[0]
+
+            current_element = "".join(filter(str.isalpha, current_nuclide))
+            prev_element = "".join(filter(str.isalpha, prev_nuclide))
+
+            print(
+                f"  Current element: {current_element, prev_element} , comparison: {prev_element[:-1]} "
+            )
+
+            if current_element.startswith(
+                prev_element[:-1]
+            ) and current_nuclide.startswith(prev_nuclide[:-1]):
+                suffix = current_nuclide[-1]
+                print(f"  Found suffix: {suffix}")
+                if suffix:
+                    superscript_suffix = convert_to_superscript(suffix)
+                    new_nuclide = current_nuclide[:-1] + superscript_suffix
+                    line = line.replace(current_nuclide, new_nuclide, 1)
+        suffixed_lines.append(line)
+
     with open(TXT_PATH, "w", encoding="utf-8") as f:
-        for line in merged_lines:
+        for line in suffixed_lines:
             f.write(line + "\n")
     print(
-        f"Successfully extracted and filtered {len(merged_lines)} lines to {TXT_PATH}"
+        f"Successfully extracted and filtered {len(suffixed_lines)} lines to {TXT_PATH}"
     )
