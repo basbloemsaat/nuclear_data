@@ -9,7 +9,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 CSV_PATH = OUTPUT_DIR / "NUBASE2020_TableI.csv"
 
 TABLE1_START_PAGE = 21  # 1-based page number
-TABLE1_END_PAGE = 22  # 181  # inclusive
+TABLE1_END_PAGE = 181  # inclusive
 # Canonical header for Table I (two-line header combined)
 TABLE1_HEADER = [
     "Nuclide",
@@ -101,11 +101,24 @@ if __name__ == "__main__":
     # Merge lines that were split
     merged_lines = []
     for line in processed_lines:
-        # The first column is the nuclide, which always starts with a number.
+        # The first column is the nuclide, which always starts with a number (or '2p')
         # If a line does not start with a number (or is empty), it is a continuation of the previous line.
-        if line.strip() and not line.strip()[0].isdigit():
+        if (line.strip() and not line.strip()[0].isdigit()) or line.strip().startswith(
+            "2p"
+        ):
             if merged_lines:
-                merged_lines[-1] += f" {line.strip()}"
+                # insert line right after the previous line's last semicolon
+                last_semicolon_index = merged_lines[-1].rfind(";")
+                if last_semicolon_index != -1:
+                    merged_lines[-1] = (
+                        merged_lines[-1][: last_semicolon_index + 1]
+                        + line.strip()
+                        + " "
+                        + merged_lines[-1][last_semicolon_index + 1 :].strip()
+                    )
+
+
+                # merged_lines[-1] += f" {line.strip()}"
         else:
             merged_lines.append(line)
 
