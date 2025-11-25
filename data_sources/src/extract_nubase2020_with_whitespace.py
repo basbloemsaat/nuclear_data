@@ -1,13 +1,14 @@
 from pathlib import Path
 
 import pdfplumber
+import re
 
 
 PDF_PATH = Path(__file__).parent.parent / "NUBASE2020.pdf"
 TXT_PATH = Path(__file__).parent.parent / "tmp" / "nubase2020_table_ws.txt"
 
-TABLE1_START_PAGE = 21  # 1-based page number
-TABLE1_END_PAGE = 22  # inclusive
+TABLE1_START_PAGE = 163  # 21
+TABLE1_END_PAGE = 164  # 181  # inclusive
 
 SUPERSCRIPT_MAP = {
     "i": "ⁱ",
@@ -36,7 +37,9 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
         for i in range(start_page - 1, end_page):
             page = pdf.pages[i]
             # layout=True preserves the layout of the text on the page.
-            text = page.extract_text(layout=True, x_tolerance=1, y_tolerance=3)
+            text = page.extract_text(
+                layout=True, x_tolerance=1, y_tolerance=3, x_density=2, y_density=2
+            )
             if text:
                 all_text.append(text)
 
@@ -48,12 +51,12 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
             if line.strip()
         ]
 
+        # Filter out lines that start with "∗", those are footnotes
         filtered_lines = [
             line for line in extracted_lines if not line.strip().startswith("∗")
         ]
 
-        # print(f"Extracted {len(filtered_lines)} lines after filtering.")
-
+        # Remove header/footer lines that repeat on each page
         header_lines_to_remove = {
             "Chinese Physics C Vol. 45, No. 3 (2021) 030001",
             "Table I. The NUBASE2020 table (Explanation of Table on page 030001-16)",
@@ -71,13 +74,13 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
 
         # Post-process lines to fix superscripts
         # pdfplumber does not always correctly extract superscripts.
-        # For now, we only fix the β− case.
+        # For now, we only fix the β⁻ case.
         processed_lines = [line.replace("β−", "β⁻") for line in final_lines]
 
         # Merge lines that were split
         merged_lines = []
         for line in processed_lines:
-            # The first column is the nuclide, which always starts with a number (or '2p')
+            # The first column is the nuclide, which always starts with a number (or is '2p')
             # If a line does not start with a number (or is empty), it is a continuation of the previous line.
             if (
                 line.strip() and not line.strip()[0].isdigit()
@@ -97,25 +100,29 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
             else:
                 merged_lines.append(line)
 
+        def nuclide_from_line(line: str) -> str:
+            return line.split()[0]
+
+        def element_from_nuclide(nuclide: str) -> str:
+            return "".join(filter(str.isalpha, nuclide))
+
         # Convert nuclide suffixes to superscripts
         suffixed_lines = []
         for i, line in enumerate(merged_lines):
-            if i > 0:
-                prev_line = suffixed_lines[i - 1]
-                current_nuclide = line.split()[0]
-                prev_nuclide = prev_line.split()[0]
+            if i == 0:
+                suffixed_lines.append(line)
+                continue
 
-                current_element = "".join(filter(str.isalpha, current_nuclide))
-                prev_element = "".join(filter(str.isalpha, prev_nuclide))
+            prev_line = suffixed_lines[i - 1]
+            current_nuclide = nuclide_from_line(line)
 
-                if current_element.startswith(
-                    prev_element[:-1]
-                ) and current_nuclide.startswith(prev_nuclide[:-1]):
-                    suffix = current_nuclide[-1]
-                    if suffix:
-                        superscript_suffix = convert_to_superscript(suffix)
-                        new_nuclide = current_nuclide[:-1] + superscript_suffix
-                        line = line.replace(current_nuclide, new_nuclide, 1)
+            prev_nuclide = nuclide_from_line(prev_line)
+
+            if current_nuclide[:-1] == prev_nuclide:
+                suffix = current_nuclide[-1]
+                if suffix and suffix in "ijmnpqrs":
+                    line = f"{prev_nuclide:<6}{suffix:<2}{line[8:]}"
+
             suffixed_lines.append(line)
 
     return suffixed_lines
