@@ -7,8 +7,8 @@ import re
 PDF_PATH = Path(__file__).parent.parent / "NUBASE2020.pdf"
 TXT_PATH = Path(__file__).parent.parent / "tmp" / "nubase2020_table_ws.txt"
 
-TABLE1_START_PAGE = 163  # 21
-TABLE1_END_PAGE = 164  # 181  # inclusive
+TABLE1_START_PAGE = 21  # 21
+TABLE1_END_PAGE = 24  # 181  # inclusive
 
 SUPERSCRIPT_MAP = {
     "i": "ⁱ",
@@ -27,6 +27,15 @@ def convert_to_superscript(s: str) -> str:
     Converts a string to its superscript equivalent.
     """
     return "".join(SUPERSCRIPT_MAP.get(char, char) for char in s)
+
+
+def extract_N_from_nuclide(nuclide: str) -> int:
+    """Extracts number from the beginning of a string."""
+    first_part = re.split(r'[^0-9]', nuclide.strip(), maxsplit=0, flags=0)[0]
+    if not first_part:
+        return 0
+    return int(first_part)
+
 
 
 def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> list[str]:
@@ -63,6 +72,10 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
             "Nuclide Mass excess Excitation Energy Half-life Jπ Ens Reference Year of Decay modes and intensities",
             "(keV) (keV) discovery (%)",
             "(keV)       (keV)                          discovery (%)",
+            "Chinese       Physics      C   Vol.   45,   No.    3  (2021)      030001",
+            "Table      I.  The      NUBASE2020                 table      (Explanation              of   Table      on    page      030001-16)",
+            "Nuclide             Mass    excess                       Excitation      Energy                            Half-life                          Jπ        Ens    Reference          Year   of           Decay    modes     and   intensities",
+            "(keV)                                     (keV)                                                                                                           discovery                            (%)",
         }
 
         final_lines = [
@@ -79,12 +92,32 @@ def extract_table_from_pdf(pdf_path: Path, start_page: int, end_page: int) -> li
 
         # Merge lines that were split
         merged_lines = []
-        for line in processed_lines:
+        for i, line in enumerate(processed_lines):
             # The first column is the nuclide, which always starts with a number (or is '2p')
             # If a line does not start with a number (or is empty), it is a continuation of the previous line.
-            if (
-                line.strip() and not line.strip()[0].isdigit()
-            ) or line.strip().startswith("2p"):
+
+            print(line)
+            needs_merge = False
+
+            if line.strip() and not line.strip()[0].isdigit():
+                needs_merge = True
+
+            if i > 0:
+                prev_number = extract_N_from_nuclide(merged_lines[-1])
+                current_number = extract_N_from_nuclide(line)
+
+                print(f"Comparing N: prev={prev_number} current={current_number} ")
+
+                if current_number < prev_number:
+                    needs_merge = True
+
+            # prev_number =
+
+            # if (
+            #     line.strip() and not line.strip()[0].isdigit()
+            # ) or line.strip().startswith("2p"):
+
+            if needs_merge:
                 if merged_lines:
                     # insert line right after the previous line's last semicolon
                     last_semicolon_index = merged_lines[-1].rfind(";")
