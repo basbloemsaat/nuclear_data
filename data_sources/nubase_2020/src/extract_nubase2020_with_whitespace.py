@@ -310,7 +310,7 @@ def extract_data_from_lines(table_pages: list[str]):
         ]
         isotope["decay_modes"] = decay_modes
 
-        if True or isotope["name"] == "10Be":
+        if  isotope["name"] == "10Be": # or True:
             # print(line)
             # print(isotope)
 
