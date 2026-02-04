@@ -1,0 +1,25 @@
+version = 1
+revision = 3
+requires-python = ">=3.13"
+
+[manifest]
+members = [
+    "candidate-data-sources",
+    "nubase-2020",
+    "nuclear-data-visualization",
+]
+
+[[package]]
+name = "candidate-data-sources"
+version = "0.1.0"
+source = { virtual = "data_sources/candidates" }
+
+[[package]]
+name = "nubase-2020"
+version = "0.1.0"
+source = { editable = "data_sources/nubase_2020" }
+
+[[package]]
+name = "nuclear-data-visualization"
+version = "0.1.0"
+source = { virtual = "." }

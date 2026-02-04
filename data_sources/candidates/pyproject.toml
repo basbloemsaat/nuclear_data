@@ -1,0 +1,5 @@
+[project]
+name = "candidate_data_sources"
+version = "0.1.0"
+description = "dummy package to group candidate data sources"
+readme = "README.md"
